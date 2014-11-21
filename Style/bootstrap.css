@@ -115,8 +115,9 @@ optgroup,
 select,
 textarea {
   color: inherit;
-  font: inherit;
-  margin: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 button {
   overflow: visible;
@@ -5866,6 +5867,7 @@ table > tbody > tr > td,
 table > tfoot > tr > td,
 .table > tfoot > tr > td {
   border-color: transparent;
+    margin-left: 40px;
 }
 input,
 textarea {
