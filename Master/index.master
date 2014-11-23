@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta charset="utf-8"/>
-    <title>Reid & McNeilly Books</title>
+    <title>McNeilly Reids Books</title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet" href="../Style/bootstrap.css" media="screen"/>
     <link rel="stylesheet" href="../Style/usebootstrap.css"/>
@@ -21,7 +21,7 @@
        <div class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-          <a href="Home.aspx" class="navbar-brand">Reid & McNeilly Books</a>
+          <a href="Home.aspx" class="navbar-brand">McNeilly Reids Books</a>
         </div>
         <div class="navbar-collapse collapse" id="navbar-main">
           

@@ -44,4 +44,8 @@ Partial Class Page_Register
         Me.Server.Transfer("Register.aspx")
 
     End Sub
+
+    Protected Sub btnRegister_Click1(sender As Object, e As System.EventArgs) Handles btnRegister.Click
+
+    End Sub
 End Class
