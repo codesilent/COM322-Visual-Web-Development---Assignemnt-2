@@ -14,8 +14,10 @@ html {
 }
 body {
   margin: 0;
-}
+},
+asiddasidde,
 
+d
 article,
 aside,
 details,
@@ -458,6 +460,7 @@ h3,
 h4,
 .h4 {
   font-size: 19px;
+    width: 441px;
 }
 h5,
 .h5 {
@@ -469,6 +472,8 @@ h6,
 }
 p {
   margin: 0 0 10.5px;
+    width: 442px;
+    text-align: left;
 }
 .lead {
   margin-bottom: 21px;
