@@ -135,6 +135,7 @@ input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
   cursor: pointer;
+    text-align: center;
 }
 button[disabled],
 html input[disabled] {
@@ -472,7 +473,7 @@ h6,
 }
 p {
   margin: 0 0 10.5px;
-    width: 442px;
+    width: 533px;
     text-align: left;
 }
 .lead {
