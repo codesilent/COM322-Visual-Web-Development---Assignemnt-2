@@ -4,39 +4,32 @@
     <style type="text/css">
     .auto-style6 {
         width: 193px;
-        height: 23px;
+        height: 307px;
     }
     .auto-style7 {
         width: 344px;
-        height: 23px;
+        height: 307px;
             text-align: left;
         }
     .auto-style10 {
-        height: 804px;
+        height: 855px;
             margin-right: 136px;
-            width: 425px;
+            width: 536px;
+            margin-bottom: 0px;
         }
     .auto-style13 {
-            height: 39px;
+            height: 41px;
             width: 193px;
             text-align: center;
         }
     .auto-style17 {
         width: 193px;
-        height: 98px;
+        height: 43px;
     }
-    .auto-style18 {
-        width: 344px;
-        height: 98px;
-            text-align: left;
-        }
         .auto-style21 {
-            height: 39px;
+            height: 41px;
             width: 344px;
             text-align: left;
-        }
-        .auto-style23 {
-            width: 227px;
         }
         .auto-style24 {
             font-size: medium;
@@ -54,23 +47,43 @@
             width: 344px;
             text-align: left;
         }
-        .auto-style30 {
-            height: 38px;
+        .auto-style36 {
+            height: 36px;
             width: 193px;
             text-align: center;
         }
-        .auto-style31 {
-            height: 38px;
+        .auto-style37 {
+            height: 36px;
             width: 344px;
             text-align: left;
         }
-        .auto-style32 {
-            height: 202px;
+        .auto-style38 {
+            height: 35px;
             width: 193px;
             text-align: center;
         }
-        .auto-style33 {
-            height: 202px;
+        .auto-style39 {
+            height: 35px;
+            width: 344px;
+            text-align: left;
+        }
+        .auto-style40 {
+            height: 40px;
+            width: 193px;
+            text-align: center;
+        }
+        .auto-style41 {
+            height: 40px;
+            width: 344px;
+            text-align: left;
+        }
+        .auto-style42 {
+            height: 43px;
+            width: 193px;
+            text-align: center;
+        }
+        .auto-style43 {
+            height: 43px;
             width: 344px;
             text-align: left;
         }
@@ -87,177 +100,183 @@
     <br/>
 <table class="auto-style10">
     <tr>
-        <td class="auto-style30">
-            Username</td>
-        <td class="auto-style31">
+        <td class="auto-style36">
+            *Username</td>
+        <td class="auto-style37">
         <asp:TextBox ID="txtUsername" runat="server" ValidationGroup="Validate"></asp:TextBox>
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ControlToValidate="txtUsername" ErrorMessage="Please enter a valid Username!" ForeColor="Red" ValidationGroup="Validate">*</asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ControlToValidate="txtUsername" ErrorMessage="Please enter a valid Username!" ForeColor="Red" ValidationGroup="ValidateRegister">*</asp:RequiredFieldValidator>
         </td>
     </tr>
     <tr>
-        <td class="auto-style13">
+        <td class="auto-style28">
     &nbsp;&nbsp;
             *<asp:Label runat="server" Text="Title"></asp:Label>
         </td>
-        <td class="auto-style21">
+        <td class="auto-style29">
     <asp:DropDownList ID="cboTitle" runat="server">
         <asp:ListItem>Mr.</asp:ListItem>
         <asp:ListItem>Mrs.</asp:ListItem>
     </asp:DropDownList>
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="cboTitle" ErrorMessage="Please select your Title!" ForeColor="#FB0000" ValidationGroup="Validate">*</asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="cboTitle" ErrorMessage="Please select your Title!" ForeColor="#FB0000" ValidationGroup="ValidateRegister">*</asp:RequiredFieldValidator>
         </td>
     </tr>
     <tr>
-        <td class="auto-style30">
+        <td class="auto-style36">
 
     &nbsp;&nbsp;
 
             *<asp:Label ID="Label1" runat="server" Text="First Name:"></asp:Label>
         </td>
-        <td class="auto-style31">
+        <td class="auto-style37">
         <asp:TextBox ID="txtFirstName" runat="server"></asp:TextBox>
-        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtFirstName" ErrorMessage="Please enter your first name" ForeColor="#FB0000" ValidationGroup="Validate">*</asp:RequiredFieldValidator>
+            <asp:CompareValidator ID="CompareValidator6" runat="server" ControlToValidate="txtFirstName" ErrorMessage="Please enter your name" ForeColor="Red" Operator="DataTypeCheck" ValidationGroup="ValidateRegister">*</asp:CompareValidator>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator11" runat="server" ControlToValidate="txtFirstName" ErrorMessage="Please enter your first name" ForeColor="Red" ValidationGroup="ValidateRegister">*</asp:RequiredFieldValidator>
         </td>
     </tr>
     <tr>
-        <td class="auto-style28">
+        <td class="auto-style38">
 
     &nbsp;&nbsp;
 
             *<asp:Label ID="Label2" runat="server" Text="Surname:"></asp:Label>
         </td>
-        <td class="auto-style29">
+        <td class="auto-style39">
         <asp:TextBox ID="txtSurname" runat="server"></asp:TextBox>
-        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtSurname" ErrorMessage="Please enter your surname" ForeColor="red">*</asp:RequiredFieldValidator>
+            <asp:CompareValidator ID="CompareValidator7" runat="server" ControlToValidate="txtSurname" ErrorMessage="Please enter your surname" ForeColor="Red" Operator="DataTypeCheck" ValidationGroup="ValidateRegister">*</asp:CompareValidator>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator12" runat="server" ControlToValidate="txtSurname" ErrorMessage="Please enter your surname" ForeColor="Red" ValidationGroup="ValidateRegister">*</asp:RequiredFieldValidator>
         </td>
     </tr>
     <tr>
-        <td class="auto-style30">
+        <td class="auto-style36">
 
     &nbsp;&nbsp;
 
     <asp:Label ID="Label3" runat="server" Text="*Address:"></asp:Label>
         </td>
-        <td class="auto-style31">
+        <td class="auto-style37">
         <asp:TextBox ID="txtAddress1" runat="server"></asp:TextBox>
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="txtAddress1" ErrorMessage="Please enter your address!" ForeColor="#FB0000" ValidationGroup="Validate">*</asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="txtAddress1" ErrorMessage="Please enter your address!" ForeColor="#FB0000" ValidationGroup="ValidateRegister">*</asp:RequiredFieldValidator>
         </td>
     </tr>
     <tr>
-        <td class="auto-style28">
+        <td class="auto-style38">
 
     &nbsp;&nbsp;
 
     <asp:Label ID="Label4" runat="server" Text="Address Line 2:"></asp:Label>
         </td>
-        <td class="auto-style29">
+        <td class="auto-style39">
         <asp:TextBox ID="txtAddress2" runat="server"></asp:TextBox></td>
     </tr>
     <tr>
-        <td class="auto-style30">
+        <td class="auto-style36">
 
     &nbsp;&nbsp;
 
     <asp:Label ID="Label5" runat="server" Text="*City/Town:"></asp:Label>
         </td>
-        <td class="auto-style31">
+        <td class="auto-style37">
         <asp:TextBox ID="txtCityTown" runat="server"></asp:TextBox>
-            <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToValidate="txtCityTown" ErrorMessage="Please enter your City/Town" ForeColor="Red" Operator="DataTypeCheck" ValidationGroup="Validate">*</asp:CompareValidator>
+            <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToValidate="txtCityTown" ErrorMessage="Please enter your city/town" ForeColor="Red" Operator="DataTypeCheck" ValidationGroup="ValidateRegister">*</asp:CompareValidator>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" ControlToValidate="txtCityTown" ErrorMessage="Please enter your City/Town" ForeColor="red" ValidationGroup="ValidateRegister">*</asp:RequiredFieldValidator>
         </td>
     </tr>
     <tr>
-        <td class="auto-style30">
+        <td class="auto-style36">
 
     &nbsp;&nbsp;
 
     <asp:Label ID="Label6" runat="server" Text="Country:"></asp:Label>
         </td>
-        <td class="auto-style31">
+        <td class="auto-style37">
         <asp:TextBox ID="txtCountry" runat="server"></asp:TextBox>
+            <asp:CompareValidator ID="CompareValidator8" runat="server" ControlToValidate="txtCountry" ErrorMessage="Please enter your country" ForeColor="Red" Operator="DataTypeCheck" ValidationGroup="ValidateRegister">*</asp:CompareValidator>
         </td>
     </tr>
     <tr>
-        <td class="auto-style30">
+        <td class="auto-style36">
 
     &nbsp;&nbsp;
 
     <asp:Label ID="Label7" runat="server" Text="*Post Code:"></asp:Label>
         </td>
-        <td class="auto-style31">
+        <td class="auto-style37">
         <asp:TextBox ID="txtPostCode" runat="server"></asp:TextBox>
-            <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="txtPostCode" ErrorMessage="Please enter aa valid postcode!" ForeColor="#FB0000">*</asp:RegularExpressionValidator>
+            <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="txtPostCode" ErrorMessage="Please enter a valid postcode!" ForeColor="Red" ValidationGroup="ValidateRegister" ValidationExpression="^([A-PR-UWYZ]([0-9]{1,2}|([A-HK-Y][0-9]|[A-HK-Y][0-9]([0-9]|[ABEHMNPRV-Y]))|[0-9][A-HJKS-UW])\ [0-9][ABD-HJLNP-UW-Z]{2}|(GIR\ 0AA)|(SAN\ TA1)|(BFPO\ (C\/O\ )?[0-9]{1,4})|((ASCN|BBND|[BFS]IQQ|PCRN|STHL|TDCU|TKCA)\ 1ZZ))$">*</asp:RegularExpressionValidator>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" ControlToValidate="txtPostCode" ErrorMessage="Please enter your postcode" ForeColor="Red" ValidationGroup="ValidateRegister">*</asp:RequiredFieldValidator>
         </td>
     </tr>
     <tr>
-        <td class="auto-style30">
+        <td class="auto-style40">
 
     &nbsp;&nbsp;
 
     <asp:Label ID="Label9" runat="server" Text="Telephone Number:"></asp:Label>
         </td>
-        <td class="auto-style31">
+        <td class="auto-style41">
         <asp:TextBox ID="txtTelNum" runat="server"></asp:TextBox>
-            <asp:CompareValidator ID="CompareValidator4" runat="server" ControlToValidate="txtTelNum" ErrorMessage="Please enter your telephone number" ForeColor="Red" Operator="DataTypeCheck" Type="Double" ValidationGroup="Validate">*</asp:CompareValidator>
+            <asp:CompareValidator ID="CompareValidator9" runat="server" ControlToValidate="txtTelNum" ErrorMessage="Please enter your telephone number" ForeColor="Red" Operator="DataTypeCheck" Type="Integer" ValidationGroup="ValidateRegister">*</asp:CompareValidator>
         </td>
     </tr>
     <tr>
-        <td class="auto-style30">
+        <td class="auto-style40">
 
     &nbsp;&nbsp;&nbsp;
 
     <asp:Label ID="Label8" runat="server" Text="Email:"></asp:Label>
         </td>
-        <td class="auto-style31">
+        <td class="auto-style41">
         <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>
-            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtEmail" ErrorMessage="Please enter a valid e-mail address" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ValidationGroup="Validate">*</asp:RegularExpressionValidator>
+            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtEmail" ErrorMessage="Please enter a valid e-mail address" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ValidationGroup="ValidateRegister">*</asp:RegularExpressionValidator>
         </td>
     </tr>
     <tr>
-        <td class="auto-style32">
+        <td class="auto-style40">
 
             &nbsp;&nbsp;*Password:</td>
-        <td class="auto-style33">
-        <asp:TextBox ID="txtPassword1" runat="server" ValidationGroup="Validate"></asp:TextBox>
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtPassword1" ErrorMessage="Please enter a valid password" ForeColor="#FB0000" ValidationGroup="Validate">*</asp:RequiredFieldValidator>
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="txtPassword1" ErrorMessage="Please enter a valid password" ForeColor="#FB0000" ValidationGroup="Validate">*</asp:RequiredFieldValidator>
+        <td class="auto-style41">
+        <asp:TextBox ID="txtPassword1" runat="server" TextMode="Password"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtPassword1" ErrorMessage="Please enter a valid password" ForeColor="#FB0000" ValidationGroup="ValidateRegister">*</asp:RequiredFieldValidator>
         </td>
-        <td class="auto-style23">Passwords must:<br />
-            - be at least 10 characters,<br />
-            -contain at least one lower case letter,<br />
-            -One upper case letter,<br />
-            One digit and one specal character,<br />
-            -Valid special characters are -@#$%^&amp;+=</td>
     </tr>
     <tr>
-        <td class="auto-style30">
+        <td class="auto-style13">
 
     &nbsp;&nbsp;
 
     <asp:Label ID="Label11" runat="server" Text="*Confirm Password:"></asp:Label>
         </td>
-        <td class="auto-style31">
+        <td class="auto-style21">
         <asp:TextBox ID="txtPassword2" runat="server" TextMode="Password"></asp:TextBox>
-            <asp:CompareValidator ID="CompareValidator5" runat="server" ControlToCompare="txtPassword1" ControlToValidate="txtPassword2" ErrorMessage="Password's must be valid and match!" ForeColor="#FB0000">*</asp:CompareValidator>
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtPassword2" ErrorMessage="Please enter a valid password" ForeColor="#FB0000" ValidationGroup="Validate">*</asp:RequiredFieldValidator>
+            <asp:CompareValidator ID="CompareValidator5" runat="server" ControlToCompare="txtPassword1" ControlToValidate="txtPassword2" ErrorMessage="Password's must be valid and match!" ForeColor="#FB0000" ValidationGroup="ValidateRegister">*</asp:CompareValidator>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtPassword2" ErrorMessage="Please confirm your password" ForeColor="#FB0000" ValidationGroup="ValidateRegister">*</asp:RequiredFieldValidator>
         </td>
+    </tr>
+    <tr>
+        <td class="auto-style42">
+
+    <asp:ValidationSummary ID="ValidationSummary1" runat="server" ValidationGroup="ValidateRegister" ForeColor="Yellow" />
+
+        </td>
+        <td class="auto-style43">
+            &nbsp;</td>
     </tr>
     <tr>
         <td class="auto-style17">
 
-    <asp:ValidationSummary ID="ValidationSummary1" runat="server" />
+    <asp:Button ID="btnRegister" runat="server" Text="Register" BorderStyle="None" ValidationGroup="ValidateRegister" />
 
         </td>
-        <td class="auto-style18">&nbsp;</td>
+        <td class="auto-style43">
+            <asp:Button ID="btnReset" runat="server" Text="Reset " />
+        </td>
     </tr>
     <tr>
         <td class="auto-style6">
 
-    <asp:Button ID="btnRegister" runat="server" Text="Register" ValidationGroup="Validate" />
-
-        </td>
+            &nbsp;</td>
         <td class="auto-style7">
-            <asp:Button ID="btnReset" runat="server" Text="Reset " />
-        </td>
+            &nbsp;</td>
     </tr>
 </table>
 <br/>

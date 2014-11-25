@@ -3,12 +3,10 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <asp:Button ID="Button1" runat="server" Text="Button" />
-    <asp:TextBox ID="txtInput" runat="server"></asp:TextBox>
-    <asp:Label ID="lblOutput" runat="server" Text="Label"></asp:Label>
-    <br />
 
-    <h2>Welcome Valued Customer/UserName</h2>
+    <h2>
+        <asp:Label ID="lblWelcome" runat="server"></asp:Label>
+</h2>
 
 	<h2>Who the hell are we?</h2>
 
