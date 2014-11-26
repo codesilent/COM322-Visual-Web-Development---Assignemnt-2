@@ -4,11 +4,9 @@ Partial Class _Default
 
     Protected Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
 
-        If Session("UserLogin") = Session("Username") Then
-            lblWelcome.Text = "Welcome " + Session("UserLogin")
-        Else
-            Response.Redirect("Login.aspx")
-        End If
+
+        lblWelcome.Text = "Welcome " + Session("UserLogin")
+       
 
 
 

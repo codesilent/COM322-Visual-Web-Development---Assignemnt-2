@@ -109,11 +109,10 @@
     </tr>
     <tr>
         <td class="auto-style28">
-    &nbsp;&nbsp;
-            *<asp:Label runat="server" Text="Title"></asp:Label>
+    &nbsp;&nbsp; <asp:Label runat="server" Text="Title"></asp:Label>
         </td>
         <td class="auto-style29">
-    <asp:DropDownList ID="cboTitle" runat="server">
+    <asp:DropDownList ID="cboTitle" runat="server" ForeColor="Black">
         <asp:ListItem>Mr.</asp:ListItem>
         <asp:ListItem>Mrs.</asp:ListItem>
     </asp:DropDownList>
@@ -223,18 +222,18 @@
 
     &nbsp;&nbsp;&nbsp;
 
-    <asp:Label ID="Label8" runat="server" Text="Email:"></asp:Label>
+            *<asp:Label ID="Label8" runat="server" Text="Email:"></asp:Label>
         </td>
         <td class="auto-style41">
         <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>
             <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtEmail" ErrorMessage="Please enter a valid e-mail address" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ValidationGroup="ValidateRegister">*</asp:RegularExpressionValidator>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator13" runat="server" ErrorMessage="Please enter a valid email address" ControlToValidate="txtEmail" ForeColor="Red">*</asp:RequiredFieldValidator>
         </td>
     </tr>
     <tr>
         <td class="auto-style40">
 
-            &nbsp;&nbsp;*Password:</td>
-        <td class="auto-style41">
+            &nbsp;&nbsp;*Password:       <td class="auto-style41">
         <asp:TextBox ID="txtPassword1" runat="server" TextMode="Password"></asp:TextBox>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtPassword1" ErrorMessage="Please enter a valid password" ForeColor="#FB0000" ValidationGroup="ValidateRegister">*</asp:RequiredFieldValidator>
         </td>

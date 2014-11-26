@@ -4,20 +4,26 @@ Partial Class Page_Login
 
     Protected Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
 
-        Session("UserLogin") = txtUsername.Text
-        Session("UserPass") = txtPassword.Text
+        Dim strUserLogin As String = txtUsername.Text
+        Dim strUserPass As String = txtPassword.Text
 
-        Session("DefaultUsername") = "Username"
-        Session("DefaultPassword") = "Password"
+        Dim strDefaultUser As String = "Username"
+        Dim strDefaultPass As String = "Password"
 
-        If Session("UserLogin") = Session("Username") And Session("UserPass") = Session("Password2") Then
+
+
+        If strUserLogin = strDefaultUser And strUserPass = strDefaultPass Then
+            Session("UserLogin") = strUserLogin
             Response.Redirect("Home.aspx")
 
-        ElseIf Session("UserLogin") = Session("DefaultUsername") And Session("UserPass") = Session("DefaultPassword") Then
+
+        ElseIf strUserLogin = Session("Username") And strUserPass = Session("Password2") Then
+            Session("UserLogin") = strUserLogin
             Response.Redirect("Home.aspx")
 
-        ElseIf Not (Session("UserLogin") = Session("Username")) Then
+        Else
             lblError.Text = "Have you registered yet?"
+
         End If
 
     End Sub

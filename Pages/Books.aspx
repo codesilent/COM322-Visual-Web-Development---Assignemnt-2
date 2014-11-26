@@ -9,15 +9,24 @@
             float: left;
         }
 
+        .container {
+            background-color: #465967;
+        }
+
+        .navbar-default {
+            background-color: #2B3E50;
+        }
+
         /* Floats the description (title, summary and button) to the left against the book image*/
         .bookContent {
             float: left;
+            margin-bottom: 30px;
             margin-left: 20px;
         }
 
         /* Container with a width for each book (image, title, summary and button)*/
         .bookContainer {
-            width: 720px;
+            width: 800px;
         }
 
         /* Container for the shopping cart (title, image, num of items, subtotal, check & empty cart buttons)*/
@@ -36,13 +45,19 @@
             width: 120px;
         }
 
+        .price {
+            font-size: 32px;
+            color: orange;
+        }
+
+
     </style>
 
     <div id="cart">
         <h2>Shopping Cart</h2>
         <img class="cartImage" src="../Images/ShoppingCart.png"/>
-        <p>Number of Items:</p>
-        <p>Subtotal:</p>
+        <asp:Label ID="Label16" runat="server" Text="Number Of Items: "></asp:Label><asp:Label ID="lblNumItems" runat="server" Text="0"></asp:Label><br />
+        <asp:Label ID="Label3" runat="server" Text="Subtotal: "></asp:Label><asp:Label ID="lblSubtotal" runat="server" Text=""></asp:Label><br /><br />
         <asp:Button ID="Button6" runat="server" Text="Go To Checkout"/><br /><br />
         <asp:Button ID="Button7" runat="server" Text="Empty Cart" />
     </div>
@@ -50,113 +65,171 @@
     <h1>Biographies</h1>
 
     <div class="bookContainer">
-        <img class="bookImage" src="../Images/Books%20/Biographies/AlexFergusonMyAutobiography.jpeg" />
+        <img class="bookImage" src="../Images/Books/Biographies/AlexFergusonMyAutobiography.jpeg" />
         <div class="bookContent">
             <h4>Alex Ferguson My Autobiography By Alex Ferguson</h4>
             <p>The celebratory, revealing, inspiring and entertaining autobiography of the greatest manager in the history of British football.</p>
             <p>My Goodness, this is fascinating. (Evening Standard) <br /> His book is really a piece of oral history, and his life is a conduit to a time when a working-class man of talent could, not by the magical alchemy of elite education or the stardust of celebrity, but by a lifetime of hard work and hard thinking, rise to the very top and, flaws aside, remain true to the best of the world he came from. (The Guardian)</p>
-            <asp:Label ID="Label3" runat="server" Text="Price £1.00"></asp:Label><br />
-            <asp:Label ID="Label2" runat="server" Text="Type: "></asp:Label><asp:DropDownList ID="DropDownList1" runat="server" ForeColor="#000066">
+            <asp:Label ID="lblLabel" runat="server" Text="Price: £"></asp:Label><asp:Label ID="lblPrice" class="price" runat="server" Text="5"></asp:Label><br />
+            <asp:Label ID="Label2" runat="server" Text="Type: "></asp:Label><asp:DropDownList ID="DropDownList1" runat="server" ForeColor="#000066" AutoPostBack="true">
                 <asp:ListItem>Paperback</asp:ListItem>
                 <asp:ListItem>Hardback</asp:ListItem>
                 <asp:ListItem>E-Book</asp:ListItem>
             </asp:DropDownList>&nbsp;
             <asp:Label ID="Label1" runat="server" Text="Quantity:" Width="57px"></asp:Label>
-            <asp:TextBox ID="TextBox1" runat="server" Width="40px" Text="1"></asp:TextBox><br /><br />
-            <asp:Button ID="Button1" runat="server" Text="Add To Cart" />
+            <asp:TextBox ID="txtQuantity" runat="server" Width="35px" Text="1"></asp:TextBox>
+            <asp:RangeValidator ID="RangeValidator1" runat="server" ErrorMessage="Please enter a quantity between 1 & 100" ControlToValidate="txtQuantity" MaximumValue="100" MinimumValue="1" Type="Integer"></asp:RangeValidator>
+            <br /><br />
+            <asp:Button ID="Button1" runat="server" Text="Add To Cart"/>
+            <asp:ValidationSummary ID="ValidationSummary1" runat="server" />
+        </div>
+    </div>
+    <br />
+    <br />
+
+    <div class="bookContainer">
+        <img class="bookImage" src="../Images/Books/Biographies/JohnCleeseSoAnyway.jpeg" />
+        <div class="bookContent">
+            <h4>So, Anyway... The Autobiography By John Cleese</h4>
+            <p>The autobiography of a comedy giant.</p>
+            <p><b>"Vivid, ridiculously entertaining, and, at times, explosively funny...</b> Cleese is a master of crisp comic prose: his elegant syntax and sudden absurdities would have PG Wodehouse raising a martini glass. So, Anyway... glows with fairness, kindness, gentleness and loyalty. Have we been wrong, all these years, about which member of the Python team should actually be known as the nice one?" (Nicholas Barber Sunday Express)</p>
+            <p>"Left me wiping away tears." (Helen Brown Sunday Telegraph)</p>
+            <asp:Label ID="Label4" runat="server" Text="Price £1.00"></asp:Label><br />
+            <asp:Label ID="Label5" runat="server" Text="Type: "></asp:Label><asp:DropDownList ID="DropDownList2" runat="server" ForeColor="#000066">
+                <asp:ListItem>Paperback</asp:ListItem>
+                <asp:ListItem>Hardback</asp:ListItem>
+                <asp:ListItem>E-Book</asp:ListItem>
+            </asp:DropDownList>&nbsp;
+            <asp:Label ID="Label6" runat="server" Text="Quantity:" Width="57px"></asp:Label>
+            <asp:TextBox ID="TextBox2" runat="server" Width="35px" Text="1"></asp:TextBox><br /><br />
+            <asp:Button ID="Button2" runat="server" Text="Add To Cart" />
+        </div>
+    </div>
+    <br />
+    <br />
+
+    <div class="bookContainer">
+        <img class="bookImage" src="../Images/Books/Biographies/KevinBridgesWeNeedToTalkAbout.jpeg" />
+        <div class="bookContent">
+            <h4>We Need To Talk About...Kevin Bridges By Kevin Bridges</h4>
+            <p>Kevin Bridges, Scotland's 'young comedy prodigy' (Guardian), has followed a meteoric path, from his first five-minute set in The Stand comedy club in Glasgow to selling out the SECC to a record-breaking 100,000 fans. Born in Clydebank he still lives in Glasgow. Now, at the tender age of just twenty-seven, Kevin puts pen to paper to tell his story so far in his brilliant memoir, We Need to Talk About . . . Kevin Bridges. </p>
+            <p>The Best Scottish Stand up of his Generation. (The Scotsman)</p>
+            <asp:Label ID="Label7" runat="server" Text="Price £1.00"></asp:Label><br />
+            <asp:Label ID="Label8" runat="server" Text="Type: "></asp:Label><asp:DropDownList ID="DropDownList3" runat="server" ForeColor="#000066">
+                <asp:ListItem>Paperback</asp:ListItem>
+                <asp:ListItem>Hardback</asp:ListItem>
+                <asp:ListItem>E-Book</asp:ListItem>
+            </asp:DropDownList>&nbsp;
+            <asp:Label ID="Label9" runat="server" Text="Quantity:" Width="57px"></asp:Label>
+            <asp:TextBox ID="TextBox3" runat="server" Width="35px" Text="1"></asp:TextBox><br /><br />
+            <asp:Button ID="Button3" runat="server" Text="Add To Cart" />
+        </div>
+    </div>
+    <br />
+    <br />
+
+    <div class="bookContainer">
+        <img class="bookImage" src="../Images/Books/Biographies/RobBrydonSmallManInABook.jpeg" />
+        <div class="bookContent">
+            <h4>Small Man In A Book By Rob Brydon</h4>
+            <p>Rob Brydon is the award winning star of many critically acclaimed comedy series, from the darkly funny Human Remains and immensely popular Gavin and Stacey to his recent outing alongside Steve Coogan in Michael Winterbottom's The Trip, as well as host of Would I Lie to You? and The Rob Brydon Show. Rob has five children and lives in London. </p>
+            <p>Brydon guides us wittily through his early years. He's excellent at describing the nitty-gritty of being on stage --Independent on Sunday Independent on Sunday The Times</p>
+            <asp:Label ID="Label10" runat="server" Text="Price £1.00"></asp:Label><br />
+            <asp:Label ID="Label11" runat="server" Text="Type: "></asp:Label><asp:DropDownList ID="DropDownList4" runat="server" ForeColor="#000066">
+                <asp:ListItem>Paperback</asp:ListItem>
+                <asp:ListItem>Hardback</asp:ListItem>
+                <asp:ListItem>E-Book</asp:ListItem>
+            </asp:DropDownList>&nbsp;
+            <asp:Label ID="Label12" runat="server" Text="Quantity:" Width="57px"></asp:Label>
+            <asp:TextBox ID="TextBox4" runat="server" Width="35px" Text="1"></asp:TextBox><br /><br />
+            <asp:Button ID="Button4" runat="server" Text="Add To Cart" />
+        </div>
+    </div>
+    <br />
+    <br />
+
+    <div class="bookContainer">
+        <img class="bookImage" src="../Images/Books/Biographies/StephenFryMoreFoolMe.jpeg" />
+        <div class="bookContent">
+            <h4>More Fool Me By Stephen Fry</h4>
+            <p>Stephen Fry is a leading light in film, theatre, radio and television the world over, receiving accolades in spades and plaudits by the shovel. As a writer, producer, director, actor and presenter he has featured in works as varied and adored as the movie Wilde, the TV series Blackadder and Jeeves and Wooster, the sketch show A Bit of Fry and Laurie, the panel game QI, the radio series Fry's English Delight, Shakespeare's Globe's celebrated 2012 production of Twelfth Night (as Malvolio) and documentaries on countless subjects very close to his heart.</p>
+            <asp:Label ID="Label13" runat="server" Text="Price £1.00"></asp:Label><br />
+            <asp:Label ID="Label14" runat="server" Text="Type: "></asp:Label><asp:DropDownList ID="DropDownList5" runat="server" ForeColor="#000066">
+                <asp:ListItem>Paperback</asp:ListItem>
+                <asp:ListItem>Hardback</asp:ListItem>
+                <asp:ListItem>E-Book</asp:ListItem>
+            </asp:DropDownList>&nbsp;
+            <asp:Label ID="Label15" runat="server" Text="Quantity:" Width="57px"></asp:Label>
+            <asp:TextBox ID="TextBox5" runat="server" Width="35px" Text="1"></asp:TextBox><br /><br />
+            <asp:Button ID="Button5" runat="server" Text="Add To Cart" />
         </div>
     </div><br />
 
-    <div class="bookContainer">
-        <img class="bookImage" src="../Images/Books%20/Biographies/JohnCleeseSoAnyway.jpeg" />
-        <h4 class="bookContent">So, Anyway... The Autobiography By John Cleese</h4>
-        <p class="bookContent">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sollicitudin orci vel cursus lobortis. Morbi commodo turpis vitae leo tristique sodales. Aliquam at auctor metus. Suspendisse a lobortis massa. Duis dignissim lorem non nibh cursus lobortis. Aenean varius vulputate risus, a lacinia justo gravida sit amet. Cras cursus nunc eu sem ultrices ullamcorper. Proin eu lorem eget tellus porta tincidunt nec nec lorem. Donec condimentum a quam ut ultrices. Nulla quis urna interdum turpis elementum ultricies a sed sem. Donec fermentum sed nulla vel faucibus. </p>
-        <asp:Button ID="Button2" class="bookContent" runat="server" Text="Add To Cart" />
-    </div><br />
-
-    <div class="bookContainer">
-        <img class="bookImage" src="../Images/Books%20/Biographies/KevinBridgesWeNeedToTalkAbout.jpeg" />
-        <h4 class="bookContent">We Need To Talk About...Kevin Bridges By Kevin Bridges</h4>
-        <p class="bookContent">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sollicitudin orci vel cursus lobortis. Morbi commodo turpis vitae leo tristique sodales. Aliquam at auctor metus. Suspendisse a lobortis massa. Duis dignissim lorem non nibh cursus lobortis. Aenean varius vulputate risus, a lacinia justo gravida sit amet. Cras cursus nunc eu sem ultrices ullamcorper. Proin eu lorem eget tellus porta tincidunt nec nec lorem. Donec condimentum a quam ut ultrices. Nulla quis urna interdum turpis elementum ultricies a sed sem. Donec fermentum sed nulla vel faucibus. </p>
-        <asp:Button ID="Button3" class="bookContent" runat="server" Text="Add To Cart" />
-    </div><br />
-
-    <div class="bookContainer">
-        <img class="bookImage" src="../Images/Books%20/Biographies/RobBrydonSmallManInABook.jpeg" />
-        <h4 class="bookContent">Small Man In A Book By Rob Brydon</h4>
-        <p class="bookContent">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sollicitudin orci vel cursus lobortis. Morbi commodo turpis vitae leo tristique sodales. Aliquam at auctor metus. Suspendisse a lobortis massa. Duis dignissim lorem non nibh cursus lobortis. Aenean varius vulputate risus, a lacinia justo gravida sit amet. Cras cursus nunc eu sem ultrices ullamcorper. Proin eu lorem eget tellus porta tincidunt nec nec lorem. Donec condimentum a quam ut ultrices. Nulla quis urna interdum turpis elementum ultricies a sed sem. Donec fermentum sed nulla vel faucibus. </p>
-        <asp:Button ID="Button4" class="bookContent" runat="server" Text="Add To Cart" />
-    </div><br />
-
-    <div class="bookContainer">
-        <img class="bookImage" src="../Images/Books%20/Biographies/StephenFryMoreFoolMe.jpeg" />
-        <h4 class="bookContent">More Fool Me By Stephen Fry</h4>
-        <p class="bookContent">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sollicitudin orci vel cursus lobortis. Morbi commodo turpis vitae leo tristique sodales. Aliquam at auctor metus. Suspendisse a lobortis massa. Duis dignissim lorem non nibh cursus lobortis. Aenean varius vulputate risus, a lacinia justo gravida sit amet. Cras cursus nunc eu sem ultrices ullamcorper. Proin eu lorem eget tellus porta tincidunt nec nec lorem. Donec condimentum a quam ut ultrices. Nulla quis urna interdum turpis elementum ultricies a sed sem. Donec fermentum sed nulla vel faucibus. </p>
-        <asp:Button ID="Button5" class="bookContent" runat="server" Text="Add To Cart" />
-    </div><br />
-
+    <!-- 
     <h1>Children's Books</h1>
-    <img src="../Images/Books%20/Childrens%20Books/BeanoAnnual2015.jpeg" />
-    <img src="../Images/Books%20/Childrens%20Books/JeffKinneyTheLongHaul.jpeg" />
-    <img src="../Images/Books%20/Childrens%20Books/LaurenChildFeelTheFear.jpeg" />
-    <img src="../Images/Books%20/Childrens%20Books/MichaelBondLoveFromPaddington.jpeg" />
-    <img src="../Images/Books%20/Childrens%20Books/NatalieRussellRabbitsInTheSnow.jpeg" />
+    <img src="../Images/Books/Childrens Books/BeanoAnnual2015.jpeg" />
+    <img src="../Images/Books/Childrens Books/JeffKinneyTheLongHaul.jpeg" />
+    <img src="../Images/Books/Childrens Books/LaurenChildFeelTheFear.jpeg" />
+    <img src="../Images/Books/Childrens Books/MichaelBondLoveFromPaddington.jpeg" />
+    <img src="../Images/Books/Childrens Books/NatalieRussellRabbitsInTheSnow.jpeg" />
 
     <h1>Computing  &amp; Internet</h1>
-    <img src="../Images/Books%20/Computing/AndrewHodgesAlanTuringTheEnigma.jpeg" />
-    <img src="../Images/Books%20/Computing/DaveGormanTooMuchInformation.jpeg" />
-    <img src="../Images/Books%20/Computing/JonDuckettJavaScript&JQuery.jpeg" />
-    <img src="../Images/Books%20/Computing/SeanMcManusRaspberryPiForDummies.jpeg" />
-    <img src="../Images/Books%20/Computing/WalterIssacsonTheInnovators.jpeg" />
+    <img src="../Images/Books/Computing/AndrewHodgesAlanTuringTheEnigma.jpeg" />
+    <img src="../Images/Books/Computing/DaveGormanTooMuchInformation.jpeg" />
+    <img src="../Images/Books/Computing/JonDuckettJavaScript&JQuery.jpeg" />
+    <img src="../Images/Books/Computing/SeanMcManusRaspberryPiForDummies.jpeg" />
+    <img src="../Images/Books/Computing/WalterIssacsonTheInnovators.jpeg" />
 
     <h1>Food &amp; Drink</h1>
-    <img src="../Images/Books%20/Food%20&%20Drink/HughFearnleyWhittingstallRiverCottageLightAndEasy.jpeg" />
-    <img src="../Images/Books%20/Food%20&%20Drink/JamieOliverJamiesComfortFood.jpeg" />
-    <img src="../Images/Books%20/Food%20&%20Drink/JamiesMartinHomeComforts.jpeg" />
-    <img src="../Images/Books%20/Food%20&%20Drink/TomKerridgeBestEverDishes.jpeg" />
-    <img src="../Images/Books%20/Food%20&%20Drink/YotamOttolenghiPlentyMore.jpeg" />
+    <img src="../Images/Books/Food & Drink/HughFearnleyWhittingstallRiverCottageLightAndEasy.jpeg" />
+    <img src="../Images/Books/Food & Drink/JamieOliverJamiesComfortFood.jpeg" />
+    <img src="../Images/Books/Food & Drink/JamiesMartinHomeComforts.jpeg" />
+    <img src="../Images/Books/Food & Drink/TomKerridgeBestEverDishes.jpeg" />
+    <img src="../Images/Books/Food & Drink/YotamOttolenghiPlentyMore.jpeg" />
 
     <h1>History</h1>
-    <img src="../Images/Books%20/History/AlanJohnsonPleaseMisterPostman.jpeg" />
-    <img src="../Images/Books%20/History/AndrewRobertsNapoleonTheGreat.jpeg" />
-    <img src="../Images/Books%20/History/BorisJohnsonTheChurchillFactor.jpeg" />
-    <img src="../Images/Books%20/History/DavidMcCandlessKnowledgeIsBeautiful.jpeg" />
-    <img src="../Images/Books%20/History/PeterAckroydCivilWarTheHistoryOfEngland.jpeg" />
-    <img src="../Images/Books%20/History/YuvalNoahHarariSapiensABriefHistoryOfHumankind.jpeg" />
+    <img src="../Images/Books/History/AlanJohnsonPleaseMisterPostman.jpeg" />
+    <img src="../Images/Books/History/AndrewRobertsNapoleonTheGreat.jpeg" />
+    <img src="../Images/Books/History/BorisJohnsonTheChurchillFactor.jpeg" />
+    <img src="../Images/Books/History/DavidMcCandlessKnowledgeIsBeautiful.jpeg" />
+    <img src="../Images/Books/History/PeterAckroydCivilWarTheHistoryOfEngland.jpeg" />
+    <img src="../Images/Books/History/YuvalNoahHarariSapiensABriefHistoryOfHumankind.jpeg" />
 
     <h1>Home &amp; Garden</h1>
-    <img src="../Images/Books%20/Home%20&%20Garden/AlanBuckinghamAllotmentMonthByMonth.jpeg" />
-    <img src="../Images/Books%20/Home%20&%20Garden/AlanTitchmarshTheQueensHouses.jpeg" />
-    <img src="../Images/Books%20/Home%20&%20Garden/CathKidstonSewingBook.jpeg" />
-    <img src="../Images/Books%20/Home%20&%20Garden/DebbieShoreHalfYardHome.jpeg" />
-    <img src="../Images/Books%20/Home%20&%20Garden/RichardMabeyFoodForFree.jpeg" />
+    <img src="../Images/Books/Home & Garden/AlanBuckinghamAllotmentMonthByMonth.jpeg" />
+    <img src="../Images/Books/Home & Garden/AlanTitchmarshTheQueensHouses.jpeg" />
+    <img src="../Images/Books/Home & Garden/CathKidstonSewingBook.jpeg" />
+    <img src="../Images/Books/Home & Garden/DebbieShoreHalfYardHome.jpeg" />
+    <img src="../Images/Books/Home & Garden/RichardMabeyFoodForFree.jpeg" />
 
     <h1>Horror</h1>
-    <img src="../Images/Books%20/Horror/AdamNevillNoOneGetsOut.jpeg" />
-    <img src="../Images/Books%20/Horror/AprylBakerTheGhostFiles.jpeg" />
-    <img src="../Images/Books%20/Horror/JoeHillHorns.jpeg" />
-    <img src="../Images/Books%20/Horror/SibelHodgeLookBehindYou.jpeg" />
-    <img src="../Images/Books%20/Horror/StephenKingRevival.jpeg" />
+    <img src="../Images/Books/Horror/AdamNevillNoOneGetsOut.jpeg" />
+    <img src="../Images/Books/Horror/AprylBakerTheGhostFiles.jpeg" />
+    <img src="../Images/Books/Horror/JoeHillHorns.jpeg" />
+    <img src="../Images/Books/Horror/SibelHodgeLookBehindYou.jpeg" />
+    <img src="../Images/Books/Horror/StephenKingRevival.jpeg" />
 
     <h1>Literature</h1>
-    <img src="../Images/Books%20/Literature/DaniAtkinsTheStoryOfUs.jpeg" />
-    <img src="../Images/Books%20/Literature/JodiPicoultLeavingTime.jpeg" />
-    <img src="../Images/Books%20/Literature/KristinaOhlssonTheDisappeared.jpeg" />
-    <img src="../Images/Books%20/Literature/MarianKeyesTheWomanWhoStoleMyLife.jpeg" />
-    <img src="../Images/Books%20/Literature/SylviaDayCaptivatedByYou.jpeg" />
+    <img src="../Images/Books/Literature/DaniAtkinsTheStoryOfUs.jpeg" />
+    <img src="../Images/Books/Literature/JodiPicoultLeavingTime.jpeg" />
+    <img src="../Images/Books/Literature/KristinaOhlssonTheDisappeared.jpeg" />
+    <img src="../Images/Books/Literature/MarianKeyesTheWomanWhoStoleMyLife.jpeg" />
+    <img src="../Images/Books/Literature/SylviaDayCaptivatedByYou.jpeg" />
 
     <h1>Mystery</h1>
-    <img src="../Images/Books%20/Mystery/AWHartoinAGoodManGone.jpeg" />
-    <img src="../Images/Books%20/Mystery/GillianFynnGoneGirl.jpeg" />
-    <img src="../Images/Books%20/Mystery/HarlanCobenTheWoods.jpeg" />
-    <img src="../Images/Books%20/Mystery/KendraElliotVanished.jpeg" />
-    <img src="../Images/Books%20/Mystery/PeterRobinsonTheHangingValley.jpeg" />
+    <img src="../Images/Books/Mystery/AWHartoinAGoodManGone.jpeg" />
+    <img src="../Images/Books/Mystery/GillianFynnGoneGirl.jpeg" />
+    <img src="../Images/Books/Mystery/HarlanCobenTheWoods.jpeg" />
+    <img src="../Images/Books/Mystery/KendraElliotVanished.jpeg" />
+    <img src="../Images/Books/Mystery/PeterRobinsonTheHangingValley.jpeg" />
 
     <h1>Religion &amp; Spirituality</h1>
-    <img src="../Images/Books%20/Religion%20&%20Spirituality/EckhartTolleThePowerOfNow.jpeg" />
-    <img src="../Images/Books%20/Religion%20&%20Spirituality/OprahWinfreyWhatIKnowForSure.jpeg" />
-    <img src="../Images/Books%20/Religion%20&%20Spirituality/ReverendRichardColesFathomlessRiches.jpeg" />
-    <img src="../Images/Books%20/Religion%20&%20Spirituality/RhondaByrneTheSecret.jpeg" />
-    <img src="../Images/Books%20/Religion%20&%20Spirituality/RichardDawkinsTheGodDelusion.jpeg" />
+    <img src="../Images/Books/Religion & Spirituality/EckhartTolleThePowerOfNow.jpeg" />
+    <img src="../Images/Books/Religion & Spirituality/OprahWinfreyWhatIKnowForSure.jpeg" />
+    <img src="../Images/Books/Religion & Spirituality/ReverendRichardColesFathomlessRiches.jpeg" />
+    <img src="../Images/Books/Religion & Spirituality/RhondaByrneTheSecret.jpeg" />
+    <img src="../Images/Books/Religion & Spirituality/RichardDawkinsTheGodDelusion.jpeg" />
+
+        -->
 </asp:Content>
 
