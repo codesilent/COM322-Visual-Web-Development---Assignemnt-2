@@ -33,4 +33,10 @@ Partial Class Page_Login
         Me.Server.Transfer("Login.aspx")
 
     End Sub
+
+    Protected Sub btnRegister_Click(sender As Object, e As EventArgs) Handles btnRegister.Click
+
+        Response.Redirect("Register.aspx")
+
+    End Sub
 End Class

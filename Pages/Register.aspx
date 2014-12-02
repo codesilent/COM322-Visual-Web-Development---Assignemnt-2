@@ -87,26 +87,26 @@
             width: 344px;
             text-align: left;
         }
+        .auto-style44 {
+            height: 40px;
+            width: 193px;
+            text-align: center;
+            font-size: x-large;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
     <br />
-    <span class="auto-style25">Welcome!</span><span class="auto-style24"><br />
+    <span class="auto-style25">Welcome!<br />
+    <br />
+    Contact Details</span><span class="auto-style24"><br />
     <br />
     * required field<br />
     </span>
 
     <br/>
 <table class="auto-style10">
-    <tr>
-        <td class="auto-style36">
-            *Username</td>
-        <td class="auto-style37">
-        <asp:TextBox ID="txtUsername" runat="server" ValidationGroup="Validate"></asp:TextBox>
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ControlToValidate="txtUsername" ErrorMessage="Please enter a valid Username!" ForeColor="Red" ValidationGroup="ValidateRegister">*</asp:RequiredFieldValidator>
-        </td>
-    </tr>
     <tr>
         <td class="auto-style28">
     &nbsp;&nbsp; <asp:Label runat="server" Text="Title"></asp:Label>
@@ -228,6 +228,28 @@
         <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>
             <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtEmail" ErrorMessage="Please enter a valid e-mail address" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ValidationGroup="ValidateRegister">*</asp:RegularExpressionValidator>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator13" runat="server" ErrorMessage="Please enter a valid email address" ControlToValidate="txtEmail" ForeColor="Red">*</asp:RequiredFieldValidator>
+        </td>
+    </tr>
+    <tr>
+        <td class="auto-style40">
+
+            &nbsp;</td>
+        <td class="auto-style41">
+            &nbsp;</td>
+    </tr>
+    <tr>
+        <td class="auto-style44">
+
+            Login Details</td>
+        <td class="auto-style41">
+            &nbsp;</td>
+    </tr>
+    <tr>
+        <td class="auto-style36">
+            *Username</td>
+        <td class="auto-style37">
+        <asp:TextBox ID="txtUsername" runat="server" ValidationGroup="Validate"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ControlToValidate="txtUsername" ErrorMessage="Please enter a valid Username!" ForeColor="Red" ValidationGroup="ValidateRegister">*</asp:RequiredFieldValidator>
         </td>
     </tr>
     <tr>
