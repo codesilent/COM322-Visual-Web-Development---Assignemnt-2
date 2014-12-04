@@ -17,9 +17,8 @@ Partial Class Page_Books
         End If
 
         Return dblStandardPrice
+
     End Function
-
-
 
     Protected Sub DropDownList1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles DropDownList1.SelectedIndexChanged
         lblPrice.Text = findStandardPrice()
@@ -30,14 +29,22 @@ Partial Class Page_Books
         Session("intNumItems") += 1
 
         lblNumItems.Text = Session("intNumItems")
-       
+
     End Sub
 
     Protected Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
 
-
-
         lblNumItems.Text = Session("intNumItems")
+
+    End Sub
+
+    Protected Sub btnCheckout_Click(sender As Object, e As EventArgs) Handles btnCheckout.Click
+
+        If Session("intNumItems") > 1 Then
+            Response.Redirect("Cart.aspx")
+        Else
+            lblCartError.Text = "You must have atleast 1 item added to the cart before proceeding!"
+        End If
 
     End Sub
 End Class

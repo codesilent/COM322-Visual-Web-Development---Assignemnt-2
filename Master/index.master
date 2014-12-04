@@ -50,7 +50,7 @@
             <div>
                 <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
                     <asp:Label ID="lblWelcome" runat="server"></asp:Label>
-            <asp:HyperLink ID="HyperLinkLogin" runat="server" NavigateUrl="~/Pages/Login.aspx" Visible="False">Log in to place an order</asp:HyperLink>
+            <asp:HyperLink ID="HyperLinkLogin" runat="server" NavigateUrl="~/Pages/Login.aspx">Log in to place an order</asp:HyperLink>
             <asp:Button ID="btnLogout" runat="server" Text="Logout" />
         
                 </asp:ContentPlaceHolder>

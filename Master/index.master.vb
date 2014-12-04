@@ -4,10 +4,12 @@ Partial Class Test
 
     Protected Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
 
+        'HyperLinkLogin.Visible = False
+
         'If IsNothing(Session("Username")) Then
         'HyperLinkLogin.Visible = True
-        'Else
-        'lblWelcome.Text = ("Welcome " + Session("Username") + Session("UserLogin"))
+        ' Else
+        'lblWelcome.Text = ("Welcome " + Session("Username") & Session("UserLogin"))
         'btnLogout.Visible = True
         'End If
 

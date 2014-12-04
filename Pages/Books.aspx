@@ -32,7 +32,7 @@
         /* Container for the shopping cart (title, image, num of items, subtotal, check & empty cart buttons)*/
         #cart {
             width: 300px;
-            height: 350px;
+            height: 383px;
             float: right;
             text-align: center;
         }
@@ -58,8 +58,11 @@
         <img class="cartImage" src="../Images/ShoppingCart.png"/>
         <asp:Label ID="Label16" runat="server" Text="Number Of Items: "></asp:Label><asp:Label ID="lblNumItems" runat="server" Text="0"></asp:Label><br />
         <asp:Label ID="Label3" runat="server" Text="Subtotal: "></asp:Label><asp:Label ID="lblSubtotal" runat="server" Text=""></asp:Label><br /><br />
-        <asp:Button ID="Button6" runat="server" Text="Go To Checkout"/><br /><br />
-        <asp:Button ID="Button7" runat="server" Text="Empty Cart" />
+        <asp:Button ID="btnCheckout" runat="server" Text="Go To Checkout"/><br /><br />
+        <asp:Button ID="btnEmptyCart" runat="server" Text="Empty Cart" />
+        <br />
+        <br />
+        <asp:Label ID="lblCartError" runat="server"></asp:Label>
     </div>
 
     <h1>Biographies</h1>
