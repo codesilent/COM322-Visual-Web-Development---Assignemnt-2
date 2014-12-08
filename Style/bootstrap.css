@@ -472,7 +472,11 @@ h6,
 }
 p {
   margin: 0 0 10.5px;
-    width: 442px;
+<<<<<<< HEAD
+    width: 605px;
+=======
+    width: 733px;
+>>>>>>> FETCH_HEAD
     text-align: left;
 }
 .lead {
