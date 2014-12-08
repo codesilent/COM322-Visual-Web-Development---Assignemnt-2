@@ -36,6 +36,7 @@
         Checkout</p>
     <div class="boxCheckout">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <p class="auto-style">
         Your Items</p>
     <p class="auto-style1">
@@ -53,6 +54,8 @@
     <p class="auto-style1">
        </p>
 =======
+=======
+>>>>>>> FETCH_HEAD
     <p class="auto-style1">
         Your Items</p>
     <p class="auto-style1">
@@ -65,6 +68,9 @@
         &nbsp;</p>
     <p class="auto-style1">
         &nbsp;</p>
+<<<<<<< HEAD
+>>>>>>> FETCH_HEAD
+=======
 >>>>>>> FETCH_HEAD
         </div>
     <br /><br />

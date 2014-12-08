@@ -5,11 +5,14 @@ Partial Class Page_Shopping
     Protected Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         lblItem1Name.Text = CStr(Session("BookName"))
         lblItem1Price.Text = CStr(Session("Price"))
         lblItem1Quantity.Text = CStr(Session("intNumItems"))
         lblItem1Cost.Text = CStr(Session("dblSubTotal"))
 
+=======
+>>>>>>> FETCH_HEAD
 =======
 >>>>>>> FETCH_HEAD
         lblSessionFirstName.Text = Session("FirstName")

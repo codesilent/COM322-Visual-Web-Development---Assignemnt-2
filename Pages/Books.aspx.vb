@@ -2,6 +2,10 @@
 Partial Class Page_Books
     Inherits System.Web.UI.Page
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> FETCH_HEAD
 =======
 
 >>>>>>> FETCH_HEAD
@@ -12,11 +16,14 @@ Partial Class Page_Books
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         If cboBookType.SelectedIndex = 0 Then
             dblStandardPrice = 4.99
         ElseIf cboBookType.SelectedIndex = 1 Then
             dblStandardPrice = 7.99
 =======
+=======
+>>>>>>> FETCH_HEAD
         If DropDownList1.SelectedIndex = 0 Then
             dblStandardPrice = 5.0
         ElseIf DropDownList1.SelectedIndex = 1 Then
@@ -31,9 +38,12 @@ Partial Class Page_Books
     End Function
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     Protected Sub DropDownList1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboBookType.SelectedIndexChanged
         lblPrice.Text = findStandardPrice().ToString("n2")
 =======
+=======
+>>>>>>> FETCH_HEAD
     Protected Sub DropDownList1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles DropDownList1.SelectedIndexChanged
         lblPrice.Text = findStandardPrice()
 >>>>>>> FETCH_HEAD
@@ -53,7 +63,11 @@ Partial Class Page_Books
 
         lblNumItems.Text = Session("intNumItems")
 <<<<<<< HEAD
+<<<<<<< HEAD
         lblSubtotal.Text = Session("dblSubTotal")
+=======
+
+>>>>>>> FETCH_HEAD
 =======
 
 >>>>>>> FETCH_HEAD
@@ -63,12 +77,16 @@ Partial Class Page_Books
 
         lblNumItems.Text = Session("intNumItems")
 <<<<<<< HEAD
+<<<<<<< HEAD
         lblSubtotal.Text = Session("dblSubTotal")
+=======
+>>>>>>> FETCH_HEAD
 
     End Sub
 
     Protected Sub btnCheckout_Click(sender As Object, e As EventArgs) Handles btnCheckout.Click
 
+<<<<<<< HEAD
         If Session("intNumItems") >= 1 Then
             Response.Redirect("Cart.aspx")
         Else
@@ -82,11 +100,16 @@ Partial Class Page_Books
 
     Protected Sub btnCheckout_Click(sender As Object, e As EventArgs) Handles btnCheckout.Click
 
+=======
+>>>>>>> FETCH_HEAD
         If Session("intNumItems") > 1 Then
             Response.Redirect("Cart.aspx")
         Else
             lblCartError.Text = "You must have atleast 1 item added to the cart before proceeding!"
         End If
+<<<<<<< HEAD
+>>>>>>> FETCH_HEAD
+=======
 >>>>>>> FETCH_HEAD
 
     Protected Sub btnEmptyCart_Click(sender As Object, e As EventArgs) Handles btnEmptyCart.Click
