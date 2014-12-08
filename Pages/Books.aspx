@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="VB" MasterPageFile="../Master/index.master" AutoEventWireup="false" CodeFile="Books.aspx.vb" Inherits="Page_Books" %>
+﻿<%@ Page Title="" Language="VB" MasterPageFile="../Master/index.master" AutoEventWireup="false" CodeFile="Books.aspx.vb" Inherits="Page_Books"%>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
@@ -8,31 +8,28 @@
         .bookImage {
             float: left;
         }
-
-        .container {
-            background-color: #465967;
-        }
-
-        .navbar-default {
-            background-color: #2B3E50;
-        }
-
+       
         /* Floats the description (title, summary and button) to the left against the book image*/
         .bookContent {
             float: left;
             margin-bottom: 30px;
             margin-left: 20px;
+            width: 594px;
+        }
+
+        p {
+            width: 536px;
         }
 
         /* Container with a width for each book (image, title, summary and button)*/
         .bookContainer {
-            width: 800px;
+            width: 935px;
         }
 
         /* Container for the shopping cart (title, image, num of items, subtotal, check & empty cart buttons)*/
         #cart {
             width: 300px;
-            height: 350px;
+            height: 383px;
             float: right;
             text-align: center;
         }
@@ -58,8 +55,11 @@
         <img class="cartImage" src="../Images/ShoppingCart.png"/>
         <asp:Label ID="Label16" runat="server" Text="Number Of Items: "></asp:Label><asp:Label ID="lblNumItems" runat="server" Text="0"></asp:Label><br />
         <asp:Label ID="Label3" runat="server" Text="Subtotal: "></asp:Label><asp:Label ID="lblSubtotal" runat="server" Text=""></asp:Label><br /><br />
-        <asp:Button ID="Button6" runat="server" Text="Go To Checkout"/><br /><br />
-        <asp:Button ID="Button7" runat="server" Text="Empty Cart" />
+        <asp:Button ID="btnCheckout" runat="server" Text="Go To Checkout"/><br /><br />
+        <asp:Button ID="btnEmptyCart" runat="server" Text="Empty Cart" />
+        <br />
+        <br />
+        <asp:Label ID="lblCartError" runat="server"></asp:Label>
     </div>
 
     <h1>Biographies</h1>
@@ -68,10 +68,11 @@
         <img class="bookImage" src="../Images/Books/Biographies/AlexFergusonMyAutobiography.jpeg" />
         <div class="bookContent">
             <h4>Alex Ferguson My Autobiography By Alex Ferguson</h4>
+            <asp:Label ID="lblBookName" runat="server" Text="Alex Ferguson My Autobiography By Alex Ferguson"></asp:Label>
             <p>The celebratory, revealing, inspiring and entertaining autobiography of the greatest manager in the history of British football.</p>
             <p>My Goodness, this is fascinating. (Evening Standard) <br /> His book is really a piece of oral history, and his life is a conduit to a time when a working-class man of talent could, not by the magical alchemy of elite education or the stardust of celebrity, but by a lifetime of hard work and hard thinking, rise to the very top and, flaws aside, remain true to the best of the world he came from. (The Guardian)</p>
-            <asp:Label ID="lblLabel" runat="server" Text="Price: £"></asp:Label><asp:Label ID="lblPrice" class="price" runat="server" Text="5"></asp:Label><br />
-            <asp:Label ID="Label2" runat="server" Text="Type: "></asp:Label><asp:DropDownList ID="DropDownList1" runat="server" ForeColor="#000066" AutoPostBack="true">
+            <asp:Label ID="lblLabel" runat="server" Text="Price: £"></asp:Label><asp:Label ID="lblPrice" class="price" runat="server" Text="4.99"></asp:Label><br />
+            <asp:Label ID="Label2" runat="server" Text="Type: "></asp:Label><asp:DropDownList ID="cboBookType" runat="server" ForeColor="#000066" AutoPostBack="true">
                 <asp:ListItem>Paperback</asp:ListItem>
                 <asp:ListItem>Hardback</asp:ListItem>
                 <asp:ListItem>E-Book</asp:ListItem>
@@ -79,14 +80,15 @@
             <asp:Label ID="Label1" runat="server" Text="Quantity:" Width="57px"></asp:Label>
             <asp:TextBox ID="txtQuantity" runat="server" Width="35px" Text="1"></asp:TextBox>
             <asp:RangeValidator ID="RangeValidator1" runat="server" ErrorMessage="Please enter a quantity between 1 & 100" ControlToValidate="txtQuantity" MaximumValue="100" MinimumValue="1" Type="Integer"></asp:RangeValidator>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtQuantity" ErrorMessage="Please enter a quantity" ForeColor="Red">*</asp:RequiredFieldValidator>
             <br /><br />
-            <asp:Button ID="Button1" runat="server" Text="Add To Cart"/>
+            <asp:Button ID="btnAdd" runat="server" Text="Add To Cart"/>
             <asp:ValidationSummary ID="ValidationSummary1" runat="server" />
         </div>
     </div>
     <br />
     <br />
-
+    
     <div class="bookContainer">
         <img class="bookImage" src="../Images/Books/Biographies/JohnCleeseSoAnyway.jpeg" />
         <div class="bookContent">
@@ -165,7 +167,7 @@
         </div>
     </div><br />
 
-    <!-- 
+    <!--
     <h1>Children's Books</h1>
     <img src="../Images/Books/Childrens Books/BeanoAnnual2015.jpeg" />
     <img src="../Images/Books/Childrens Books/JeffKinneyTheLongHaul.jpeg" />

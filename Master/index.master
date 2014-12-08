@@ -16,6 +16,15 @@
     <![endif]-->
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
+    <style>
+        .container {
+            background-color: #465967;
+        }
+
+        .navbar-default {
+            background-color: #2B3E50;
+        }
+    </style>
 </head>
 <body>
        <div class="navbar navbar-default navbar-fixed-top">
@@ -50,7 +59,7 @@
             <div>
                 <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
                     <asp:Label ID="lblWelcome" runat="server"></asp:Label>
-            <asp:HyperLink ID="HyperLinkLogin" runat="server" NavigateUrl="~/Pages/Login.aspx" Visible="False">Log in to place an order</asp:HyperLink>
+            <asp:HyperLink ID="HyperLinkLogin" runat="server" NavigateUrl="~/Pages/Login.aspx">Log in to place an order</asp:HyperLink>
             <asp:Button ID="btnLogout" runat="server" Text="Logout" />
         
                 </asp:ContentPlaceHolder>
