@@ -1,16 +1,4 @@
-<<<<<<< HEAD
 ﻿<%@ Page Title="" Language="VB" MasterPageFile="../Master/index.master" AutoEventWireup="false" CodeFile="Books.aspx.vb" Inherits="Page_Books"%>
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-﻿<%@ Page Title="" Language="VB" MasterPageFile="../Master/index.master" AutoEventWireup="false" CodeFile="Books.aspx.vb" Inherits="Page_Books"%>
-=======
-﻿<%@ Page Title="" Language="VB" MasterPageFile="../Master/index.master" AutoEventWireup="false" CodeFile="Books.aspx.vb" Inherits="Page_Books" %>
->>>>>>> FETCH_HEAD
-=======
-﻿<%@ Page Title="" Language="VB" MasterPageFile="../Master/index.master" AutoEventWireup="false" CodeFile="Books.aspx.vb" Inherits="Page_Books" %>
->>>>>>> FETCH_HEAD
->>>>>>> FETCH_HEAD
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
@@ -80,30 +68,11 @@
         <img class="bookImage" src="../Images/Books/Biographies/AlexFergusonMyAutobiography.jpeg" />
         <div class="bookContent">
             <h4>Alex Ferguson My Autobiography By Alex Ferguson</h4>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> FETCH_HEAD
             <asp:Label ID="lblBookName" runat="server" Text="Alex Ferguson My Autobiography By Alex Ferguson"></asp:Label>
             <p>The celebratory, revealing, inspiring and entertaining autobiography of the greatest manager in the history of British football.</p>
             <p>My Goodness, this is fascinating. (Evening Standard) <br /> His book is really a piece of oral history, and his life is a conduit to a time when a working-class man of talent could, not by the magical alchemy of elite education or the stardust of celebrity, but by a lifetime of hard work and hard thinking, rise to the very top and, flaws aside, remain true to the best of the world he came from. (The Guardian)</p>
             <asp:Label ID="lblLabel" runat="server" Text="Price: £"></asp:Label><asp:Label ID="lblPrice" class="price" runat="server" Text="4.99"></asp:Label><br />
             <asp:Label ID="Label2" runat="server" Text="Type: "></asp:Label><asp:DropDownList ID="cboBookType" runat="server" ForeColor="#000066" AutoPostBack="true">
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> FETCH_HEAD
-            <p>The celebratory, revealing, inspiring and entertaining autobiography of the greatest manager in the history of British football.</p>
-            <p>My Goodness, this is fascinating. (Evening Standard) <br /> His book is really a piece of oral history, and his life is a conduit to a time when a working-class man of talent could, not by the magical alchemy of elite education or the stardust of celebrity, but by a lifetime of hard work and hard thinking, rise to the very top and, flaws aside, remain true to the best of the world he came from. (The Guardian)</p>
-            <asp:Label ID="lblLabel" runat="server" Text="Price: £"></asp:Label><asp:Label ID="lblPrice" class="price" runat="server" Text="5"></asp:Label><br />
-            <asp:Label ID="Label2" runat="server" Text="Type: "></asp:Label><asp:DropDownList ID="DropDownList1" runat="server" ForeColor="#000066" AutoPostBack="true">
-<<<<<<< HEAD
->>>>>>> FETCH_HEAD
-=======
->>>>>>> FETCH_HEAD
->>>>>>> FETCH_HEAD
                 <asp:ListItem>Paperback</asp:ListItem>
                 <asp:ListItem>Hardback</asp:ListItem>
                 <asp:ListItem>E-Book</asp:ListItem>
@@ -111,43 +80,15 @@
             <asp:Label ID="Label1" runat="server" Text="Quantity:" Width="57px"></asp:Label>
             <asp:TextBox ID="txtQuantity" runat="server" Width="35px" Text="1"></asp:TextBox>
             <asp:RangeValidator ID="RangeValidator1" runat="server" ErrorMessage="Please enter a quantity between 1 & 100" ControlToValidate="txtQuantity" MaximumValue="100" MinimumValue="1" Type="Integer"></asp:RangeValidator>
-<<<<<<< HEAD
             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtQuantity" ErrorMessage="Please enter a quantity" ForeColor="Red">*</asp:RequiredFieldValidator>
             <br /><br />
             <asp:Button ID="btnAdd" runat="server" Text="Add To Cart"/>
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtQuantity" ErrorMessage="Please enter a quantity" ForeColor="Red">*</asp:RequiredFieldValidator>
-            <br /><br />
-            <asp:Button ID="btnAdd" runat="server" Text="Add To Cart"/>
-=======
-            <br /><br />
-            <asp:Button ID="Button1" runat="server" Text="Add To Cart"/>
->>>>>>> FETCH_HEAD
-=======
-            <br /><br />
-            <asp:Button ID="Button1" runat="server" Text="Add To Cart"/>
->>>>>>> FETCH_HEAD
->>>>>>> FETCH_HEAD
             <asp:ValidationSummary ID="ValidationSummary1" runat="server" />
         </div>
     </div>
     <br />
     <br />
-<<<<<<< HEAD
     
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-    
-=======
-
->>>>>>> FETCH_HEAD
-=======
-
->>>>>>> FETCH_HEAD
->>>>>>> FETCH_HEAD
     <div class="bookContainer">
         <img class="bookImage" src="../Images/Books/Biographies/JohnCleeseSoAnyway.jpeg" />
         <div class="bookContent">
@@ -226,19 +167,7 @@
         </div>
     </div><br />
 
-<<<<<<< HEAD
     <!--
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <!--
-=======
-    <!-- 
->>>>>>> FETCH_HEAD
-=======
-    <!-- 
->>>>>>> FETCH_HEAD
->>>>>>> FETCH_HEAD
     <h1>Children's Books</h1>
     <img src="../Images/Books/Childrens Books/BeanoAnnual2015.jpeg" />
     <img src="../Images/Books/Childrens Books/JeffKinneyTheLongHaul.jpeg" />

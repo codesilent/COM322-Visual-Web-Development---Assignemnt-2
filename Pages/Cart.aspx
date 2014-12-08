@@ -35,11 +35,6 @@
     <p class="auto-style1">
         Checkout</p>
     <div class="boxCheckout">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> FETCH_HEAD
     <p class="auto-style">
         Your Items</p>
     <p class="auto-style1">
@@ -56,28 +51,6 @@
         </p>
     <p class="auto-style1">
        </p>
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> FETCH_HEAD
-    <p class="auto-style1">
-        Your Items</p>
-    <p class="auto-style1">
-        &nbsp;&nbsp;</p>
-    <p class="auto-style1">
-        &nbsp;</p>
-    <p class="auto-style1">
-        &nbsp;</p>
-    <p class="auto-style1">
-        &nbsp;</p>
-    <p class="auto-style1">
-        &nbsp;</p>
-<<<<<<< HEAD
->>>>>>> FETCH_HEAD
-=======
->>>>>>> FETCH_HEAD
->>>>>>> FETCH_HEAD
         </div>
     <br /><br />
     <p class="auto-style1">
