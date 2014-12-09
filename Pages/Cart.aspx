@@ -62,32 +62,41 @@
         <asp:Label ID="lblFirstName" runat="server" Text="First Name   |"></asp:Label>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Label ID="lblSessionFirstName" runat="server"></asp:Label>
+            <asp:TextBox ID="txtFirstName" runat="server" Visible="False"></asp:TextBox>
     </p>
     <p class="auto-style2">
         <asp:Label ID="lblSurname" runat="server" Text="Surname   |"></asp:Label>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Label ID="lblSessionSurname" runat="server"></asp:Label>
+        <asp:TextBox ID="txtSurname" runat="server" Visible="False"></asp:TextBox>
     </p>
     <p class="auto-style2">
         <asp:Label ID="lblAddress1" runat="server" Text="Address Line 1   |"></asp:Label>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Label ID="lblSessionAddress1" runat="server"></asp:Label>
+        <asp:TextBox ID="txtAddress1" runat="server" Visible="False"></asp:TextBox>
     </p>
     <p class="auto-style2">
-        <asp:Label ID="lblAddress2" runat="server" Text="Address Line 2   |"></asp:Label>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Label ID="lblSessionAddress2" runat="server"></asp:Label>
+        <asp:Label ID="lblCityTown" runat="server" Text="City/Town   |"></asp:Label>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:Label ID="lblSessionCityTown" runat="server"></asp:Label>
+        <asp:TextBox ID="txtCityTown" runat="server" Visible="False"></asp:TextBox>
     </p>
     <p class="auto-style2">
         <asp:Label ID="lblPostcode" runat="server" Text="Postcode   |"></asp:Label>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Label ID="lblSessionPostcode" runat="server"></asp:Label>
+        <asp:TextBox ID="txtPostcode" runat="server" Visible="False"></asp:TextBox>
     </p>
     <p class="auto-style2">
         <asp:Label ID="lblCountry" runat="server" Text="Country   |"></asp:Label>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Label ID="lblSessionCountry" runat="server"></asp:Label>
+    &nbsp;&nbsp;&nbsp;
+        <asp:TextBox ID="txtCountry" runat="server" Visible="False"></asp:TextBox>
     </p>
+        <p class="auto-style2">
+            &nbsp;</p>
         <p class="auto-style2">
             &nbsp;</p>
         <p class="auto-style2">

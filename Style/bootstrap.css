@@ -135,6 +135,7 @@ input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
   cursor: pointer;
+    margin-left: 0px;
 }
 button[disabled],
 html input[disabled] {
@@ -5878,8 +5879,7 @@ table > tfoot > tr > td,
 input,
 textarea {
   color: #2b3e50;
-    margin-left: 0px;
-}
+    }
 label,
 .radio label,
 .checkbox label,

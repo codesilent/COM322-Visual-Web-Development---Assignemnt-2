@@ -13,6 +13,7 @@ Partial Class Page_Register
             Session("Surname") = txtSurname.Text
             Session("Address1") = txtAddress1.Text
             Session("Address2") = txtAddress2.Text
+            Session("CityTown") = txtCityTown.Text
             Session("Country") = txtCountry.Text
             Session("Postcode") = txtPostCode.Text
             Session("TelephoneNum") = txtTelNum.Text
