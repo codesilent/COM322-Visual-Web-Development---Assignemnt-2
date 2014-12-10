@@ -37,13 +37,14 @@
             float: left;
         }
 
-
-
+        .pictureWidth {
+            height: 273px;
+        }
 
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <br/><img src="../Images/bookCollage.png" />
+    <br/><img class="pictureWidth" src="../Images/Books/Biographies/JohnCleeseSoAnyway.jpeg"/><img class="pictureWidth" src="../Images/bookCollage.png"/><img class="pictureWidth" src="../Images/Books/Computing/JonDuckettJavaScript&JQuery.jpeg"/>
     <div id="floatLeft">
     <h2>
         <b><asp:Label ID="lblWelcome" runat="server"></asp:Label></b>

@@ -5,6 +5,7 @@ Partial Class Page_Books
     Function assignValues(ByRef bookNumber As Integer) As String
         Dim variableName As String = "intQuantity" + CStr(bookNumber)
 
+
         Return variableName
 
     End Function
