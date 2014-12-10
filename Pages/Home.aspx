@@ -97,7 +97,7 @@
     </div>
 
 
-    <div id="floatRight">
+      <div id="floatRight">
 <p>&nbsp;</p>
 <p class="auto-style1">Poll&nbsp;&nbsp;&nbsp; </p>
 <table class="auto-style11">
