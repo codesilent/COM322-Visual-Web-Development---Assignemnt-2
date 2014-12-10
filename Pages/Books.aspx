@@ -88,23 +88,27 @@
     </div>
     <br />
     <br />
-    
+
     <div class="bookContainer">
         <img class="bookImage" src="../Images/Books/Biographies/JohnCleeseSoAnyway.jpeg" />
         <div class="bookContent">
-            <h4>So, Anyway... The Autobiography By John Cleese</h4>
+            <asp:Label ID="Label17" runat="server" Text="So, Anyway... The Autobiography By John Cleese"></asp:Label>
             <p>The autobiography of a comedy giant.</p>
             <p><b>"Vivid, ridiculously entertaining, and, at times, explosively funny...</b> Cleese is a master of crisp comic prose: his elegant syntax and sudden absurdities would have PG Wodehouse raising a martini glass. So, Anyway... glows with fairness, kindness, gentleness and loyalty. Have we been wrong, all these years, about which member of the Python team should actually be known as the nice one?" (Nicholas Barber Sunday Express)</p>
             <p>"Left me wiping away tears." (Helen Brown Sunday Telegraph)</p>
-            <asp:Label ID="Label4" runat="server" Text="Price £1.00"></asp:Label><br />
-            <asp:Label ID="Label5" runat="server" Text="Type: "></asp:Label><asp:DropDownList ID="DropDownList2" runat="server" ForeColor="#000066">
+            <asp:Label ID="Label18" runat="server" Text="Price: £"></asp:Label><asp:Label ID="Label19" class="price" runat="server" Text="4.99"></asp:Label><br />
+            <asp:Label ID="Label20" runat="server" Text="Type: "></asp:Label><asp:DropDownList ID="DropDownList1" runat="server" ForeColor="#000066" AutoPostBack="true">
                 <asp:ListItem>Paperback</asp:ListItem>
                 <asp:ListItem>Hardback</asp:ListItem>
                 <asp:ListItem>E-Book</asp:ListItem>
             </asp:DropDownList>&nbsp;
-            <asp:Label ID="Label6" runat="server" Text="Quantity:" Width="57px"></asp:Label>
-            <asp:TextBox ID="TextBox2" runat="server" Width="35px" Text="1"></asp:TextBox><br /><br />
-            <asp:Button ID="Button2" runat="server" Text="Add To Cart" />
+            <asp:Label ID="Label21" runat="server" Text="Quantity:" Width="57px"></asp:Label>
+            <asp:TextBox ID="txtQuantity1" runat="server" Width="35px" Text="1"></asp:TextBox>
+            <asp:RangeValidator ID="RangeValidator2" runat="server" ErrorMessage="Please enter a quantity between 1 & 100" ControlToValidate="txtQuantity" MaximumValue="100" MinimumValue="1" Type="Integer"></asp:RangeValidator>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtQuantity" ErrorMessage="Please enter a quantity" ForeColor="Red">*</asp:RequiredFieldValidator>
+            <br /><br />
+            <asp:Button ID="Button1" runat="server" Text="Add To Cart" />
+            <asp:ValidationSummary ID="ValidationSummary2" runat="server" />
         </div>
     </div>
     <br />

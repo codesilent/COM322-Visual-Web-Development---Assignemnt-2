@@ -36,21 +36,23 @@
         Checkout</p>
     <div class="boxCheckout">
     <p class="auto-style">
-        Your Items</p>
-    <p class="auto-style1">
-        <asp:Label ID="lblItem1Name" runat="server"></asp:Label>
+        Your Items<table class="nav-justified">
+            <tr>
+                <td>
+                    <asp:Label ID="lblItem1Name" runat="server" Text=""></asp:Label>
+                </td>
+                <td>
+                    <asp:Label ID="lblItem1Price" runat="server" Text=""></asp:Label>
+                </td>
+                <td>
+                    <asp:Label ID="lblItem1Quantity" runat="server" Text=""></asp:Label>
+                </td>
+                <td>
+                    <asp:Label ID="lblItem1Cost" runat="server" Text=""></asp:Label>
+                </td>
+            </tr>
+            </table>
         </p>
-    <p class="auto-style1">
-        <asp:Label ID="lblItem1Price" runat="server" Text=""></asp:Label>
-        </p>
-    <p class="auto-style1">
-        <asp:Label ID="lblItem1Quantity" runat="server" Text=""></asp:Label>
-        </p>
-    <p class="auto-style1">
-        <asp:Label ID="lblItem1Cost" runat="server" Text=""></asp:Label>
-        </p>
-    <p class="auto-style1">
-       </p>
         </div>
     <br /><br />
     <p class="auto-style1">
