@@ -5851,6 +5851,8 @@ body {
 table,
 .table {
   font-size: 12px;
+    height: 192px;
+    width: 316px;
 }
 table a,
 .table a {

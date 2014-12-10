@@ -32,6 +32,9 @@
             height: 383px;
             float: right;
             text-align: center;
+            background-color: #7e7e7e;
+            border-radius: 42px;
+            padding-top: 18px;
         }
 
         /* centers and resizes shopping cart image*/

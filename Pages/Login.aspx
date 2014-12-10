@@ -37,18 +37,16 @@
             height: 28px;
         }
         .boxExisting {
-        background-color: #465967;
+        background-color: #7e7e7e;
         border-radius: 20px;
         padding-left: 22px;
-        padding-bottom: 33px;
         margin-top: 32px;
         margin-right: 650px;
+        border-radius: 42px;
+        width: 336px;
        }
         .boxNewCustomers{
-        background-color: #465967;
-        border-radius: 20px;
         padding-left: 22px;
-        padding-bottom: 33px;
         padding-top: 0px;
         margin-top: 32px;
         margin-right: 650px;
@@ -160,5 +158,6 @@
         </tr>
     </table>
         </div>
+    <br/>
 </asp:Content>
 

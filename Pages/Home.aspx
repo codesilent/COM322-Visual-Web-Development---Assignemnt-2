@@ -20,13 +20,17 @@
         }
         .auto-style20 {
             font-size: 15px;
-            width: 84%;
+            width: 42%;
             height: 19px;
         }
 
         #floatRight {
-            width: 422px;
+            background-color: #7e7e7e;
+            border-radius: 42px;
             float: right;
+            padding-left: 20px;
+            width: 372px;
+            margin-top: 20px;
         }
 
         #floatLeft {
@@ -42,7 +46,7 @@
     <br/><img src="../Images/bookCollage.png" />
     <div id="floatLeft">
     <h2>
-        <asp:Label ID="lblWelcome" runat="server"></asp:Label>
+        <b><asp:Label ID="lblWelcome" runat="server"></asp:Label></b>
 </h2>
 
 	<h2>Who Are We?</h2>
@@ -100,7 +104,7 @@
     </tr>
     <tr>
         <td class="auto-style21">&nbsp;</td>
-        <td class="auto-style18">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Votes</td>
+        <td class="auto-style20">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Votes</td>
         <td class="auto-style18"></td>
     </tr>
     <tr>
