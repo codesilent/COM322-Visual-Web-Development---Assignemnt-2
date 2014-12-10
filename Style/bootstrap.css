@@ -5851,6 +5851,7 @@ body {
 table,
 .table {
   font-size: 12px;
+    margin-top: 0px;
 }
 table a,
 .table a {
@@ -5874,13 +5875,12 @@ table > tbody > tr > td,
 table > tfoot > tr > td,
 .table > tfoot > tr > td {
   border-color: transparent;
-    margin-left: 40px;
+    margin-left: 80px;
 }
 input,
 textarea {
   color: #2b3e50;
-    margin-left: 0px;
-}
+    }
 label,
 .radio label,
 .checkbox label,

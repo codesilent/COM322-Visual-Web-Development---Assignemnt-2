@@ -21,8 +21,7 @@
         .auto-style20 {
             font-size: 15px;
             width: 84%;
-            height: 19px;
-        }
+            }
 
         #floatRight {
             width: 422px;
@@ -105,32 +104,25 @@
     </tr>
     <tr>
         <td class="auto-style21">
-            <asp:CheckBox ID="chkPaperback" runat="server" Text="Paperback"/>
+            <asp:RadioButtonList ID="radBookPoll" runat="server" Height="151px" Width="91px">
+                <asp:ListItem Value="radPaperback">Paperback</asp:ListItem>
+                <asp:ListItem Value="radHardback">Hardback</asp:ListItem>
+                <asp:ListItem Value="radEBook">E-Book</asp:ListItem>
+                <asp:ListItem Value="radDontmind">Don&#39;t mind</asp:ListItem>
+            </asp:RadioButtonList>
         </td>
-        <td class="auto-style20">&nbsp;&nbsp;&nbsp; &nbsp;<asp:Label ID="lblPaperback" runat="server"></asp:Label>
-        </td>
-    </tr>
-    <tr>
-        <td class="auto-style21">&nbsp;</td>
-        <td class="auto-style20">&nbsp;</td>
-    </tr>
-    <tr>
-        <td class="auto-style21">
-            <asp:CheckBox ID="chkHardback" runat="server" Text="Hardback" />
-        </td>
-        <td class="auto-style20">&nbsp;&nbsp;&nbsp; &nbsp;<asp:Label ID="lblHardback" runat="server"></asp:Label>
-        </td>
-    </tr>
-    <tr>
-        <td class="auto-style21">
-            &nbsp;</td>
-        <td class="auto-style20">&nbsp;</td>
-    </tr>
-    <tr>
-        <td class="auto-style21">
-            <asp:CheckBox ID="chkEBook" runat="server" Text="E-Book" />
-        </td>
-        <td class="auto-style20">&nbsp;&nbsp;&nbsp; &nbsp;<asp:Label ID="lblEbook" runat="server"></asp:Label>
+        <td class="auto-style20">&nbsp;&nbsp;<asp:Label ID="lblPaperback" runat="server"></asp:Label>
+            &nbsp;<br />
+            <br />
+            &nbsp;<asp:Label ID="lblHardback" runat="server"></asp:Label>
+            &nbsp;&nbsp;<br />
+            &nbsp;
+            <br />
+            &nbsp;<asp:Label ID="lblEbook" runat="server"></asp:Label>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <br />
+            <br />
+            <asp:Label ID="lblDontMind" runat="server"></asp:Label>
         </td>
     </tr>
     <tr>
