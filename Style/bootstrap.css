@@ -5879,7 +5879,8 @@ table > tfoot > tr > td,
 input,
 textarea {
   color: #2b3e50;
-    }
+    margin-left: 0px;
+}
 label,
 .radio label,
 .checkbox label,
