@@ -5,44 +5,50 @@ Partial Class _Default
     Protected Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
 
         lblWelcome.Text = "Welcome " + Session("UserLogin")
-
-        lblHardback.Text = ViewState("Hardback")
-
-        lblPaperback.Text = ViewState("Paperback")
-
-        lblEbook.Text = ViewState("EBook")
-
-        ViewState("TotalVoteCount") = ViewState("Paperback") + ViewState("Hardback") + ViewState("EBook")
-
-        lblTotalVoteCount.Text = ViewState("TotalVoteCount")
-
        
     End Sub
 
     Protected Sub btnVote_Click(sender As Object, e As EventArgs) Handles btnVote.Click
 
-        If chkPaperback.Checked = True Then
-            ViewState("Paperback") += 1
+        Dim radPaperback, radHardback, radEBook, radDontmind As Double
+        Dim votes As String = 0
+
+        radPaperback = radBookPoll.Text = "radPaperback"
+        radHardback = radBookPoll.Text = "radHardback"
+        radEBook = radBookPoll.Text = "radEBook"
+        radDontmind = radBookPoll.Text = "radDontmind"
+
+        If radPaperback Then
+            For Each vote In votes
+                ViewState("Paperback") += 1
+            Next
             lblPaperback.Text = ViewState("Paperback")
-            ViewState("TotalVoteCount") += 1
-            lblTotalVoteCount.Text = ViewState("TotalVoteCount")
 
-        ElseIf chkHardback.Checked = True Then
-            ViewState("Hardback") += 1
+        ElseIf radHardback Then
+            For Each vote In votes
+                ViewState("Hardback") += 1
+            Next
             lblHardback.Text = ViewState("Hardback")
-            ViewState("TotalVoteCount") += 1
-            lblTotalVoteCount.Text = ViewState("TotalVoteCount")
 
-        ElseIf chkEBook.Checked = True Then
-            ViewState("EBook") += 1
+        ElseIf radEBook Then
+            For Each vote In votes
+                ViewState("EBook") += 1
+            Next
             lblEbook.Text = ViewState("EBook")
-            ViewState("TotalVoteCount") += 1
-            lblTotalVoteCount.Text = ViewState("TotalVoteCount")
+
+        ElseIf radDontmind Then
+            For Each vote In votes
+                ViewState("DontMind") += 1
+            Next
+            lblDontMind.Text = ViewState("DontMind")
 
         Else
             lblVoteError.Text = "Please select an option to vote!"
 
         End If
+
+        ViewState("TotalVoteCount") = ViewState("Paperback") + ViewState("Hardback") + ViewState("EBook") + ViewState("DontMind")
+        lblTotalVoteCount.Text = ViewState("TotalVoteCount")
 
     End Sub
 End Class
