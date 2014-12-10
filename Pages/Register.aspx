@@ -97,7 +97,7 @@
 
     &nbsp;&nbsp;
 
-    <asp:Label ID="Label3" runat="server" Text="*Address:"></asp:Label>
+    <asp:Label ID="Label3" runat="server" Text="*Address Line 1:"></asp:Label>
         </td>
         <td class="auto-style2">
         <asp:TextBox ID="txtAddress1" runat="server"></asp:TextBox>
