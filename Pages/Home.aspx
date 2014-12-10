@@ -20,14 +20,9 @@
         }
         .auto-style20 {
             font-size: 15px;
-<<<<<<< HEAD
             width: 42%;
             height: 19px;
         }
-=======
-            width: 84%;
-            }
->>>>>>> FETCH_HEAD
 
         #floatRight {
             background-color: #7e7e7e;

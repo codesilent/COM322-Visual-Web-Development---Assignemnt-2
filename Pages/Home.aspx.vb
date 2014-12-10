@@ -5,6 +5,17 @@ Partial Class _Default
     Protected Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
 
         lblWelcome.Text = "Welcome " + Session("UserLogin")
+
+        lblHardback.Text = ViewState("Hardback")
+
+        lblPaperback.Text = ViewState("Paperback")
+
+        lblEbook.Text = ViewState("EBook")
+
+        ViewState("TotalVoteCount") = ViewState("Paperback") + ViewState("Hardback") + ViewState("EBook")
+
+        lblTotalVoteCount.Text = ViewState("TotalVoteCount")
+
        
     End Sub
 
