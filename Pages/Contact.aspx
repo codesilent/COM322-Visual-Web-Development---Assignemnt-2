@@ -58,6 +58,8 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <p class="auto-style2">
+        &nbsp;</p>
+<p class="auto-style2">
         Contact Us</p>
     <p class="auto-style1">
         &nbsp;</p>
@@ -110,9 +112,9 @@
             <td class="auto-style18">&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style25">*Inquiry/ Feedback*Inquiry/ Feedback</td>
+            <td class="auto-style25">*Inquiry/ Feedback</td>
             <td class="auto-style26">
-                <asp:ValidationSummary ID="ValidationSummary1" runat="server" />
+                <asp:ValidationSummary ID="ValidationSummary1" runat="server" ValidationGroup="ValidateContact" />
             </td>
         </tr>
         <tr>
@@ -127,7 +129,16 @@
             <td class="auto-style29">&nbsp;
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtInquiry" ErrorMessage="Please leave your feedback or inquiry!" ForeColor="Red" ValidationGroup="ValidateContact">*</asp:RequiredFieldValidator>
 &nbsp;&nbsp;
-                <asp:Label ID="lblInquirySuccess" runat="server"></asp:Label>
+                <table class="nav-justified">
+                    <tr>
+                        <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Label ID="lblInquirySuccess" runat="server" style="font-size: large"></asp:Label>
+                        </td>
+                        <td>
+                            <asp:Image ID="imgGreenTick" runat="server" Height="111px" ImageUrl="~/Images/GreenTick.png" Visible="False" Width="170px" />
+                        </td>
+                    </tr>
+                </table>
             </td>
         </tr>
         <tr>

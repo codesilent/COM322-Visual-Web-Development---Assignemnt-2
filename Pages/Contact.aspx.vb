@@ -10,7 +10,8 @@ Partial Class Page_Contact
 
     Protected Sub btnSubmit_Click(sender As Object, e As EventArgs) Handles btnSubmit.Click
 
-        lblInquirySuccess.Text = "You have successfully submitted your feedback/inquiry. Please allow 48 hours for us to respond accordingly and thank you for visiting McNeilly Reids Book"
+        lblInquirySuccess.Text = "You have successfully submitted your feedback/inquiry." + "<br>" + "Please allow 48 hours for us to respond accordingly" + "<br>" + "Thank you for visiting McNeilly Reids Books"
+        imgGreenTick.Visible = True
 
     End Sub
 End Class

@@ -144,10 +144,9 @@
         <td class="auto-style20">&nbsp;</td>
     </tr>
     <tr>
-        <td class="auto-style21">
+        <td class="auto-style21" colspan="2">
             <asp:Button ID="btnVote" runat="server" Text="Vote" />
-        </td>
-        <td class="auto-style20">&nbsp;&nbsp;&nbsp; &nbsp;<asp:Label ID="lblVoteError" runat="server"></asp:Label>
+            &nbsp;&nbsp;&nbsp; &nbsp;<asp:Label ID="lblVoteError" runat="server"></asp:Label>
         </td>
     </tr>
 </table>

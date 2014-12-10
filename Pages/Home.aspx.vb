@@ -4,19 +4,14 @@ Partial Class _Default
 
     Protected Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
 
+        If Session("UserLogin") <> "" And Session("UserPass") <> "" Then
+
+        End If
+
         lblWelcome.Text = "Welcome " + Session("UserLogin")
 
-        lblHardback.Text = ViewState("Hardback")
 
-        lblPaperback.Text = ViewState("Paperback")
 
-        lblEbook.Text = ViewState("EBook")
-
-        ViewState("TotalVoteCount") = ViewState("Paperback") + ViewState("Hardback") + ViewState("EBook")
-
-        lblTotalVoteCount.Text = ViewState("TotalVoteCount")
-
-       
     End Sub
 
     Protected Sub btnVote_Click(sender As Object, e As EventArgs) Handles btnVote.Click
