@@ -5,6 +5,7 @@ Partial Class Page_Shopping
     Protected Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
 
         If Session("Username") = "" And Session("UserLogin") = "" Then
+            Session("NotLoggedIn") = "Please login or register before attempting to view the shopping cart"
             Response.Redirect("Login.aspx")
         Else
             lblItem1Name.Text = CStr(Session("BookName"))
@@ -26,27 +27,6 @@ Partial Class Page_Shopping
         
 
     End Sub
-
-
-    'Protected Sub btnChangeAddress_Click(sender As Object, e As EventArgs) Handles btnChangeAddress.Click
-
-    'Response.Redirect("Cart.aspx")
-
-    'lblItem1Name.Text = CStr(Session("BookName"))
-    'lblItem1Price.Text = CStr(Session("Price"))
-    'lblItem1Quantity.Text = CStr(Session("intNumItems"))
-    'lblItem1Cost.Text = CStr(Session("dblSubTotal"))
-
-    ' If (txtFirstName.Visible = False) Then
-    'txtFirstName.Visible = True
-    ' End If
-    'txtSurname.Visible = True
-    ' txtAddress1.Visible = True
-    ' txtCityTown.Visible = True
-    ' txtPostcode.Visible = True
-    ' txtCountry.Visible = True
-
-    'End Sub
 
     Protected Sub btnResetDetails_Click(sender As Object, e As EventArgs) Handles btnResetDetails.Click
 

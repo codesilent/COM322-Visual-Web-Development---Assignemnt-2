@@ -40,6 +40,7 @@
         background-color: #7e7e7e;
         border-radius: 20px;
         padding-left: 22px;
+        padding-top: 18px;
         margin-top: 32px;
         margin-right: 650px;
         border-radius: 42px;
@@ -62,11 +63,9 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <asp:Label ID="lblNotLoggedIn" runat="server" Text="Label"></asp:Label>
     <div class="boxExisting"> 
         <table class="auto-style10">
-            <tr>
-                <td class="auto-style1" colspan="2">&nbsp;</td>
-            </tr>
             <tr>
                 <td class="auto-style1" colspan="2">Existing Customers<br />
                 </td>

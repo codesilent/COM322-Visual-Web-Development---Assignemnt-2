@@ -124,18 +124,23 @@
     <div class="bookContainer">
         <img class="bookImage" src="../Images/Books/Biographies/KevinBridgesWeNeedToTalkAbout.jpeg" />
         <div class="bookContent">
-            <h4>We Need To Talk About...Kevin Bridges By Kevin Bridges</h4>
+            <b><asp:Label ID="Label4" runat="server" Text="We Need to Talk About . . . Kevin Bridges" Font-Size="Large"></asp:Label></b>
             <p>Kevin Bridges, Scotland's 'young comedy prodigy' (Guardian), has followed a meteoric path, from his first five-minute set in The Stand comedy club in Glasgow to selling out the SECC to a record-breaking 100,000 fans. Born in Clydebank he still lives in Glasgow. Now, at the tender age of just twenty-seven, Kevin puts pen to paper to tell his story so far in his brilliant memoir, We Need to Talk About . . . Kevin Bridges. </p>
-            <p>The Best Scottish Stand up of his Generation. (The Scotsman)</p>
-            <asp:Label ID="Label7" runat="server" Text="Price £1.00"></asp:Label><br />
-            <asp:Label ID="Label8" runat="server" Text="Type: "></asp:Label><asp:DropDownList ID="DropDownList3" runat="server" ForeColor="#000066">
+            <p>Kevin Bridges might just become the best stand-up in the land . . . he will go and deliver a one-liner that you want to jot down and frame (The Times)</p>
+            <p>A wonderfully dry and deadpan Glaswegian comic . . . one the most exciting talents to have emerged from Scotland since Billy Connolly (Guardian)</p>
+            <asp:Label ID="Label5" runat="server" Text="Price: £"></asp:Label><asp:Label ID="Label6" class="price" runat="server" Text="4.99"></asp:Label><br />
+            <asp:Label ID="Label17" runat="server" Text="Type: "></asp:Label><asp:DropDownList ID="DropDownList2" runat="server" ForeColor="#000066" AutoPostBack="true">
                 <asp:ListItem>Paperback</asp:ListItem>
                 <asp:ListItem>Hardback</asp:ListItem>
                 <asp:ListItem>E-Book</asp:ListItem>
             </asp:DropDownList>&nbsp;
-            <asp:Label ID="Label9" runat="server" Text="Quantity:" Width="57px"></asp:Label>
-            <asp:TextBox ID="TextBox3" runat="server" Width="35px" Text="1"></asp:TextBox><br /><br />
-            <asp:Button ID="Button3" runat="server" Text="Add To Cart" />
+            <asp:Label ID="Label19" runat="server" Text="Quantity:" Width="57px"></asp:Label>
+            <asp:TextBox ID="txtQuanityt2" runat="server" Width="35px" Text="1"></asp:TextBox>
+            <asp:RangeValidator ID="RangeValidator3" runat="server" ErrorMessage="Please enter a quantity between 1 & 100" ControlToValidate="txtQuantity" MaximumValue="100" MinimumValue="1" Type="Integer"></asp:RangeValidator>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtQuantity" ErrorMessage="Please enter a quantity" ForeColor="Red">*</asp:RequiredFieldValidator>
+            <br /><br />
+            <asp:Button ID="Button2" runat="server" Text="Add To Cart" />
+            <asp:ValidationSummary ID="ValidationSummary3" runat="server" />
         </div>
     </div>
     <br />
