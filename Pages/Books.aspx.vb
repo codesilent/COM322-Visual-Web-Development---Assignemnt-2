@@ -87,4 +87,22 @@ Partial Class Page_Books
     Protected Sub DropDownList1_SelectedIndexChanged1(sender As Object, e As EventArgs) Handles DropDownList1.SelectedIndexChanged
         lblPrice1.Text = findStandardPrice(txtQuantity1.Text, DropDownList1.SelectedIndex).ToString("n2")
     End Sub
+
+    'Protected Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    'Dim intBookQuantity As Integer = CInt(txtQuantity2.Text)
+    'Dim dblPrice As Double = CDbl(lblPrice1.Text)
+
+    '    Dim dblSubTotal As Double = intBookQuantity * dblPrice
+
+    '    Session("intNumItems") += intBookQuantity
+    '   Session("BookCost") += "£" & CStr(dblSubTotal) + "<br/>"
+    '  Session("BookName") += lblBookName1.Text + "<br/>"
+    ' Session("UnitPrice") += "£" & CStr(dblPrice) + "<br/>"
+    'Session("BookQuantity") += CStr(intBookQuantity) + "<br/>"
+    'Session("SubTotal") += dblSubTotal
+
+
+    '    lblNumItems.Text = Session("intNumItems")
+    '   lblSubtotal.Text = "£" & Session("SubTotal")
+    'End Sub
 End Class

@@ -57,4 +57,13 @@ Partial Class Page_Login
         Response.Redirect("Register.aspx")
 
     End Sub
+
+    Protected Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
+        If Session("Username") = "" And Session("UserLogin") = "" Then
+            lblNotLoggedIn.Text = Session("NotLoggedIn")
+        Else
+            lblNotLoggedIn.Text = ""
+
+        End If
+    End Sub
 End Class

@@ -236,7 +236,8 @@
 
 </table>
         </div>
-    <br/><br/>
-
+      <br/>
+    <asp:Label ID="lblRegisterSuccesful" runat="server"></asp:Label>
+    <br/>
 </asp:Content>
 
