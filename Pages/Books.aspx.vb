@@ -2,24 +2,14 @@
 Partial Class Page_Books
     Inherits System.Web.UI.Page
 
-    Function assignValues(ByRef bookNumber As Integer) As String
-        Dim variableName As String = "intQuantity" + CStr(bookNumber)
-
-
-        Return variableName
-
-    End Function
-
     'Outputs the correct price for the book type choosen'
-    Function findStandardPrice() As Double
+    Function findStandardPrice(ByRef intQuantity As Integer, ByRef strDropDownListName As String) As Double
 
         Dim dblStandardPrice As Double = 0
-        Dim intQuantity As Integer = CInt(txtQuantity.Text)
 
-
-        If cboBookType.SelectedIndex = 0 Then
+        If strDropDownListName = 0 Then
             dblStandardPrice = 4.99
-        ElseIf cboBookType.SelectedIndex = 1 Then
+        ElseIf strDropDownListName = 1 Then
             dblStandardPrice = 7.99
         Else
             dblStandardPrice = 2.99
@@ -31,31 +21,32 @@ Partial Class Page_Books
 
     'When user selects a book type display the appropiate price'
     Protected Sub DropDownList1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboBookType.SelectedIndexChanged
-        lblPrice.Text = findStandardPrice().ToString("n2")
+        lblPrice.Text = findStandardPrice(txtQuantity.Text, cboBookType.SelectedIndex).ToString("n2")
     End Sub
 
     'When book added to cart, store name, price and quantity & display number of items, subtotal'
     Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
-        Dim intQuantity As Integer = CInt(txtQuantity.Text)
+        Dim intBookQuantity As Integer = CInt(txtQuantity.Text)
         Dim dblPrice As Double = CDbl(lblPrice.Text)
 
-        Dim dblSubTotal As Double = intQuantity * dblPrice
+        Dim dblSubTotal As Double = intBookQuantity * dblPrice
 
-        Session("intNumItems") += intQuantity
-        Session("dblSubTotal") += dblSubTotal
-        Session("BookName") = lblBookName.Text
-        Session("Price") = lblPrice.Text
-        Session("Quantity") = intQuantity
+        Session("intNumItems") += intBookQuantity
+        Session("BookCost") += "£" & CStr(dblSubTotal) + "<br/>"
+        Session("BookName") += lblBookName.Text + "<br/>"
+        Session("UnitPrice") += "£" & CStr(dblPrice) + "<br/>"
+        Session("BookQuantity") += CStr(intBookQuantity) + "<br/>"
+        Session("SubTotal") += dblSubTotal
 
         lblNumItems.Text = Session("intNumItems")
-        lblSubtotal.Text = Session("dblSubTotal")
+        lblSubtotal.Text = "£" & Session("SubTotal")
     End Sub
 
     'When page loads display the number of items and subtotal in the shopping cart'
     Protected Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
 
         lblNumItems.Text = Session("intNumItems")
-        lblSubtotal.Text = Session("dblSubTotal")
+        lblSubtotal.Text = "£" & Session("SubTotal")
 
     End Sub
 
@@ -76,6 +67,24 @@ Partial Class Page_Books
     End Sub
 
     Protected Sub Button1_Click1(sender As Object, e As EventArgs) Handles Button1.Click
-        lblNumItems.Text = assignValues(2)
+        Dim intBookQuantity As Integer = CInt(txtQuantity1.Text)
+        Dim dblPrice As Double = CDbl(lblPrice1.Text)
+
+        Dim dblSubTotal As Double = intBookQuantity * dblPrice
+
+        Session("intNumItems") += intBookQuantity
+        Session("BookCost") += "£" & CStr(dblSubTotal) + "<br/>"
+        Session("BookName") += lblBookName1.Text + "<br/>"
+        Session("UnitPrice") += "£" & CStr(dblPrice) + "<br/>"
+        Session("BookQuantity") += CStr(intBookQuantity) + "<br/>"
+        Session("SubTotal") += dblSubTotal
+
+
+        lblNumItems.Text = Session("intNumItems")
+        lblSubtotal.Text = "£" & Session("SubTotal")
+    End Sub
+
+    Protected Sub DropDownList1_SelectedIndexChanged1(sender As Object, e As EventArgs) Handles DropDownList1.SelectedIndexChanged
+        lblPrice1.Text = findStandardPrice(txtQuantity1.Text, DropDownList1.SelectedIndex).ToString("n2")
     End Sub
 End Class

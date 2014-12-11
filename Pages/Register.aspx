@@ -161,7 +161,6 @@
         </td>
         <td class="auto-style2">
         <asp:TextBox ID="txtTelNum" runat="server"></asp:TextBox>
-            <asp:CompareValidator ID="CompareValidator9" runat="server" ControlToValidate="txtTelNum" ErrorMessage="Please enter your telephone number" ForeColor="Red" Operator="DataTypeCheck" Type="Integer" ValidationGroup="ValidateRegister">*</asp:CompareValidator>
         </td>
     </tr>
     <tr>

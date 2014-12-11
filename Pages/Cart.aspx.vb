@@ -4,17 +4,26 @@ Partial Class Page_Shopping
 
     Protected Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
 
-        lblItem1Name.Text = CStr(Session("BookName"))
-        lblItem1Price.Text = CStr(Session("Price"))
-        lblItem1Quantity.Text = CStr(Session("intNumItems"))
-        lblItem1Cost.Text = CStr(Session("dblSubTotal"))
+        If Session("Username") = "" And Session("UserLogin") = "" Then
+            Response.Redirect("Login.aspx")
+        Else
+            lblItem1Name.Text = CStr(Session("BookName"))
+            lblItem1Price.Text = CStr(Session("UnitPrice"))
+            lblItem1Quantity.Text = CStr(Session("BookQuantity"))
+            lblItem1Cost.Text = CStr(Session("BookCost"))
+            lblSubTotal.Text = "£" & CStr(Session("SubTotal"))
 
-        txtFirstName.Text = Session("FirstName")
-        txtSurname.Text = Session("Surname")
-        txtAddress1.Text = Session("Address1")
-        txtCityTown.Text = Session("CityTown")
-        txtPostcode.Text = Session("Postcode")
-        txtCountry.Text = Session("Country")
+
+            txtFirstName.Text = Session("FirstName")
+            txtSurname.Text = Session("Surname")
+            txtAddress1.Text = Session("Address1")
+            txtCityTown.Text = Session("CityTown")
+            txtPostcode.Text = Session("Postcode")
+            txtCountry.Text = Session("Country")
+
+        End If
+
+        
 
     End Sub
 

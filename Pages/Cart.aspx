@@ -6,8 +6,8 @@
             font-size: x-large;
         }
         .boxCheckout{
-        background-color: #465967;
-        border-radius: 20px;
+        background-color: #7e7e7e;
+        border-radius: 12px;
         padding-left: 22px;
         padding-bottom: 33px;
         padding-top: 8px;
@@ -16,8 +16,8 @@
         }
 
         .boxDelivery{
-        background-color: #465967;
-        border-radius: 20px;
+        background-color: #7e7e7e;
+        border-radius: 12px;
         padding-left: 22px;
         padding-bottom: 12px;
         padding-top: 23px;
@@ -28,6 +28,13 @@
         .auto-style2 {
             font-size: medium;
         }
+        .auto-style3 {
+            height: 17px;
+        }
+
+        td {
+            font-size: medium;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
@@ -35,30 +42,43 @@
     <p class="auto-style1">
         Checkout</p>
     <div class="boxCheckout">
-    <p class="auto-style">
-        Your Items&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Label ID="Label1" runat="server" Text="Item Price"></asp:Label>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Label ID="Label2" runat="server" Text="Quantity"></asp:Label>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Label ID="Label3" runat="server" Text="Total Cost"></asp:Label>
         <table class="nav-justified">
             <tr>
-                <td>
+                <td class="auto-style3">
+                    Yours Items</td>
+                <td class="auto-style3">
+                    Price (Per Book)</td>
+                <td class="auto-style3">
+                    Quantity</td>
+                <td class="auto-style3">
+                    Cost</td>
+            </tr>
+            <tr>
+                <td class="auto-style3">
                     <asp:Label ID="lblItem1Name" runat="server" Text=""></asp:Label>
                 </td>
-                <td>
+                <td class="auto-style3">
                     <asp:Label ID="lblItem1Price" runat="server" Text=""></asp:Label>
                 </td>
-                <td>
+                <td class="auto-style3">
                     <asp:Label ID="lblItem1Quantity" runat="server" Text=""></asp:Label>
                 </td>
-                <td>
+                <td class="auto-style3">
                     <asp:Label ID="lblItem1Cost" runat="server" Text=""></asp:Label>
                 </td>
             </tr>
+            <tr>
+                <td>
+                    &nbsp;</td>
+                <td>
+                    &nbsp;</td>
+                <td>
+                    Total:</td>
+                <td colspan="2">
+                    <asp:Label ID="lblSubTotal" runat="server" Text=""></asp:Label>
+                </td>
+            </tr>
             </table>
-        </p>
         </div>
     <br /><br />
     <p class="auto-style1">
@@ -131,5 +151,6 @@
             </tr>
         </table>
         </div>
+    <br/>
 </asp:Content>
 

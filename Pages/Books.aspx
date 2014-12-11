@@ -50,15 +50,20 @@
             color: orange;
         }
 
+        .highlight {
+            font-size: 24px;
+            color: orange;
+        }
+
 
     </style>
 
     <div id="cart">
         <h2>Shopping Cart</h2>
         <img class="cartImage" src="../Images/ShoppingCart.png"/>
-        <asp:Label ID="Label16" runat="server" Text="Number Of Items: "></asp:Label><asp:Label ID="lblNumItems" runat="server" Text="0"></asp:Label><br />
-        <asp:Label ID="Label3" runat="server" Text="Subtotal: "></asp:Label><asp:Label ID="lblSubtotal" runat="server" Text=""></asp:Label><br /><br />
-        <asp:Button ID="btnCheckout" runat="server" Text="Go To Checkout"/><br /><br />
+        <asp:Label ID="Label16" runat="server" Text="Number Of Items: "></asp:Label><asp:Label ID="lblNumItems" class="highlight" runat="server" Text="0"></asp:Label><br />
+        <asp:Label ID="Label3" runat="server" Text="Subtotal: "></asp:Label><asp:Label ID="lblSubtotal" class="highlight" runat="server" Text=""></asp:Label><br /><br />
+        <asp:Button ID="btnCheckout" runat="server" Text="Go To Checkout" BackColor="Orange"/><br /><br />
         <asp:Button ID="btnEmptyCart" runat="server" Text="Empty Cart" />
         <br />
         <br />
@@ -70,8 +75,7 @@
     <div class="bookContainer">
         <img class="bookImage" src="../Images/Books/Biographies/AlexFergusonMyAutobiography.jpeg" />
         <div class="bookContent">
-            <h4>Alex Ferguson My Autobiography By Alex Ferguson</h4>
-            <asp:Label ID="lblBookName" runat="server" Text="Alex Ferguson My Autobiography By Alex Ferguson"></asp:Label>
+            <b><asp:Label ID="lblBookName" runat="server" Text="Alex Ferguson My Autobiography By Alex Ferguson" Font-Size="Large"></asp:Label></b>
             <p>The celebratory, revealing, inspiring and entertaining autobiography of the greatest manager in the history of British football.</p>
             <p>My Goodness, this is fascinating. (Evening Standard) <br /> His book is really a piece of oral history, and his life is a conduit to a time when a working-class man of talent could, not by the magical alchemy of elite education or the stardust of celebrity, but by a lifetime of hard work and hard thinking, rise to the very top and, flaws aside, remain true to the best of the world he came from. (The Guardian)</p>
             <asp:Label ID="lblLabel" runat="server" Text="Price: £"></asp:Label><asp:Label ID="lblPrice" class="price" runat="server" Text="4.99"></asp:Label><br />
@@ -95,11 +99,11 @@
     <div class="bookContainer">
         <img class="bookImage" src="../Images/Books/Biographies/JohnCleeseSoAnyway.jpeg" />
         <div class="bookContent">
-            <asp:Label ID="Label17" runat="server" Text="So, Anyway... The Autobiography By John Cleese"></asp:Label>
+            <b><asp:Label ID="lblBookName1" runat="server" Text="So, Anyway... The Autobiography By John Cleese" Font-Size="Large"></asp:Label></b>
             <p>The autobiography of a comedy giant.</p>
             <p><b>"Vivid, ridiculously entertaining, and, at times, explosively funny...</b> Cleese is a master of crisp comic prose: his elegant syntax and sudden absurdities would have PG Wodehouse raising a martini glass. So, Anyway... glows with fairness, kindness, gentleness and loyalty. Have we been wrong, all these years, about which member of the Python team should actually be known as the nice one?" (Nicholas Barber Sunday Express)</p>
             <p>"Left me wiping away tears." (Helen Brown Sunday Telegraph)</p>
-            <asp:Label ID="Label18" runat="server" Text="Price: £"></asp:Label><asp:Label ID="Label19" class="price" runat="server" Text="4.99"></asp:Label><br />
+            <asp:Label ID="Label18" runat="server" Text="Price: £"></asp:Label><asp:Label ID="lblPrice1" class="price" runat="server" Text="4.99"></asp:Label><br />
             <asp:Label ID="Label20" runat="server" Text="Type: "></asp:Label><asp:DropDownList ID="DropDownList1" runat="server" ForeColor="#000066" AutoPostBack="true">
                 <asp:ListItem>Paperback</asp:ListItem>
                 <asp:ListItem>Hardback</asp:ListItem>
