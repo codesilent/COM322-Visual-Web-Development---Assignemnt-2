@@ -132,17 +132,19 @@
         <p class="auto-style2">
             &nbsp;</p>
         <p class="auto-style2">
-            <asp:Button ID="btnConfirmAddress" runat="server" Text="Confirm Address" ValidationGroup="ValidateDelivery" />
+            <asp:Button ID="btnConfirmAddress" runat="server" Text="Confirm Address" ValidationGroup="ValidateDelivery" BackColor="#00CC00" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="btnResetDetails" runat="server" Text="Reset details" />
-&nbsp;</p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Button ID="btnBackBooks" runat="server" Text="Back to Books" />
+        </p>
+         
         <p class="auto-style2">
-            &nbsp;</p>
-        <p class="auto-style2">
-            </p>
-        <asp:ValidationSummary ID="ValidationSummary1" runat="server" Width="211px" />
+        <asp:ValidationSummary ID="ValidationSummary1" runat="server" Width="211px" ValidationGroup="ValidateDelivery" />
+        <p>
         <table class="nav-justified">
             <tr>
                 <td>
+                    <br />
                     <asp:Label ID="lblDeliveryConfirmed" runat="server" style="font-size: large; font-weight: 700"></asp:Label>
                 </td>
                 <td>
