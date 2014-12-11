@@ -132,6 +132,19 @@
         <p class="auto-style2">
             &nbsp;</p>
         <p class="auto-style2">
+<<<<<<< HEAD
+            <asp:Button ID="btnConfirmAddress" runat="server" Text="Confirm Address" ValidationGroup="ValidateDelivery" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="btnResetDetails" runat="server" Text="Reset details" />
+&nbsp;</p>
+        <p class="auto-style2">
+            &nbsp;</p>
+        <p class="auto-style2">
+            </p>
+        <asp:ValidationSummary ID="ValidationSummary1" runat="server" Width="211px" />
+        <table class="nav-justified">
+            <tr>
+                <td>
+=======
             <asp:Button ID="btnConfirmAddress" runat="server" Text="Confirm Address" ValidationGroup="ValidateDelivery" BackColor="#00CC00" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="btnResetDetails" runat="server" Text="Reset details" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -145,6 +158,7 @@
             <tr>
                 <td>
                     <br />
+>>>>>>> FETCH_HEAD
                     <asp:Label ID="lblDeliveryConfirmed" runat="server" style="font-size: large; font-weight: 700"></asp:Label>
                 </td>
                 <td>

@@ -25,7 +25,10 @@ Partial Class Page_Register
             Session("Password1") = txtPassword1.Text
             Session("Password2") = txtPassword2.Text
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> FETCH_HEAD
             lblRegisterSuccesful.Text = "You have succesfully registered, you will be redirected in 5 seconds"
             Response.AppendHeader("Refresh", "5;url=Login.aspx")
         End If
