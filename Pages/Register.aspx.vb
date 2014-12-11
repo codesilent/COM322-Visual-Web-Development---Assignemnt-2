@@ -4,8 +4,12 @@ Partial Class Page_Register
 
     Protected Sub btnRegister_Click(ByVal Sender As Object, ByVal e As EventArgs) Handles btnRegister.Click
 
+        'Using this the Page.Validate() method instructs any validation controls on the page
+        'to validate their assigned information. 
+        'It also prevents hackers who may have turned off javascript from bypassing validation. 
         Page.Validate()
         If Page.IsValid Then
+
 
             Session("Username") = txtUsername.Text
             Session("Title") = cboTitle.Text

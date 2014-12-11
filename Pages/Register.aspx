@@ -62,6 +62,7 @@
     <asp:DropDownList ID="cboTitle" runat="server" ForeColor="Black">
         <asp:ListItem>Mr.</asp:ListItem>
         <asp:ListItem>Mrs.</asp:ListItem>
+        <asp:ListItem>Ms.</asp:ListItem>
     </asp:DropDownList>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="cboTitle" ErrorMessage="Please select your Title!" ForeColor="#FB0000" ValidationGroup="ValidateRegister">*</asp:RequiredFieldValidator>
         </td>
@@ -132,11 +133,12 @@
 
     &nbsp;&nbsp;
 
-    <asp:Label ID="Label6" runat="server" Text="Country:"></asp:Label>
+    <asp:Label ID="Label6" runat="server" Text="*Country:"></asp:Label>
         </td>
         <td class="auto-style2">
         <asp:TextBox ID="txtCountry" runat="server"></asp:TextBox>
             <asp:CompareValidator ID="CompareValidator8" runat="server" ControlToValidate="txtCountry" ErrorMessage="Please enter your country" ForeColor="Red" Operator="DataTypeCheck" ValidationGroup="ValidateRegister">*</asp:CompareValidator>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator14" runat="server" ControlToValidate="txtCountry" ErrorMessage="Please enter your country!" ForeColor="Red" ValidationGroup="ValidateRegister">*</asp:RequiredFieldValidator>
         </td>
     </tr>
     <tr>
