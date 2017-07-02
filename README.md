@@ -22,10 +22,3 @@ Navigate and choose the project folder.
 ## Contributors
 
 Project was developed by Aaron Reid & Matthew McNeilly. 
-
-## License
-
-This project is under the GLPv3 license. We welcome any and all contributions. Fork away.
-
-
-
