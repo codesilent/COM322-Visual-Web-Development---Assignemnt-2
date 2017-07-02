@@ -1,4 +1,4 @@
-## Synopsis
+## Introduction
 
 ASP.NET bookstore web application developed by Aaron Reid and Matthew McNeilly, as part of COM322 Visual Web Development for Ulster University. 
 
